@@ -1,0 +1,80 @@
+/*=======================================================================================================*/
+/*Wrapper*/
+.header{
+    position: relative;
+    height: 102px;
+    top: 40px;
+}
+/*=======================================================================================================*/
+
+/*=======================================================================================================*/
+/*Menu*/
+.menu{
+
+    .menu__list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        li{
+
+            .menu__link-wrapper{
+                display: flex;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 0%;
+                    height: 1px;
+                    left: 0;
+                    bottom: 0;
+                    background: $white;
+                    box-shadow: 0px 0px 2px #FAF0E6;
+                    transition: .2s all;
+                }
+                &:hover{
+                    .menu__list-link{
+                        color: $white;
+                        bottom: 5px;
+                        text-shadow: 0px 0px 2px #C1BFC3;
+                    }
+                    &::after{
+                        width: 100%;
+                    }
+                }
+            }
+
+            .menu__list-link{
+                font-family: 'Sansation';
+                font-size: 22px;
+                position: relative;
+                color: $grey;
+                bottom: 0;
+                text-shadow: 0px 0px 0px #C1BFC3;
+                transition: .2s all;
+            }
+        }
+    }
+
+    .logo{
+
+        img{
+            width: 234px;
+        }
+    }
+
+    @media(max-width: 768px) {
+        .menu__list{
+            display: block;
+
+            .logo{
+                position: absolute;
+                top: 0px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+}
+/*=======================================================================================================*/
