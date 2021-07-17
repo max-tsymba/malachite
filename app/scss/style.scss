@@ -28,6 +28,9 @@ body{
     padding: 0 15px;
     margin: 0 auto;
     // overflow: hidden;
+    @media(max-width: 426px) {
+        padding: 0 10px;
+    }
 }
 
 ul{
