@@ -26,24 +26,6 @@
     font-style: normal;
 }
 @font-face {
-    font-family: 'Montserrat';
-    src: local('Montserrat'), local('Montserrat-Regular'),
-        url('../../fonts/montserrat.woff2') format('woff2'),
-        url('../../fonts/montserrat.woff') format('woff'),
-        url('../../fonts/montserrat.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: local('Montserrat Bold'), local('Montserrat-Bold'),
-        url('../../fonts/montserratbold.woff2') format('woff2'),
-        url('../../fonts/montserratbold.woff') format('woff'),
-        url('../../fonts/montserratbold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
     font-family: 'Days-One';
     src: local('Days-One'), local('Days-One-Regular'),
         url('../../fonts/Days-One.woff') format('woff'),
