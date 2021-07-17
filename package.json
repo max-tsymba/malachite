@@ -22,6 +22,7 @@
     "gulp-ssi": "^0.1.5",
     "gulp-uglify-es": "^2.0.0",
     "jquery": "^3.6.0",
+    "reset-css": "^5.0.1",
     "webpack": "^5.38.1",
     "webpack-stream": "^6.1.2"
   },
