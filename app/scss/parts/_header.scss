@@ -3,7 +3,11 @@
 .header{
     position: relative;
     height: 102px;
-    top: 40px;
+    margin-top: 40px;
+
+    @media(max-width: 768px) {
+        margin-top: 0;
+    }
 }
 /*=======================================================================================================*/
 
@@ -15,6 +19,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
 
         li{
 
@@ -45,6 +50,7 @@
             }
 
             .menu__list-link{
+                margin: 0 auto;
                 font-family: 'Sansation';
                 font-size: 22px;
                 position: relative;
@@ -63,18 +69,144 @@
         }
     }
 
+    .logo-item{
+        display: none;
+    }
+
     @media(max-width: 768px) {
         .menu__list{
-            display: block;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            left: 120%;
+            margin-right: -15px;
+            margin-left: -15px;
+            background-color: $modal-black;
+            z-index: 999;
+            transition: .4s all;
+
+            li{
+                padding: 20px 0;
+                width: 100%;   
+
+                .menu__link-wrapper{
+
+                    .menu__list-link{
+                        padding: 20px 0px;
+                    }
+
+                    &:hover{
+                        .menu__list-link{
+                            color: $white;
+                            bottom: 0px;
+                            text-shadow: 0px 0px 2px #C1BFC3;
+                        }
+                        &::after{
+                            width: 0%;
+                        }
+                    }
+                }
+            }
 
             .logo{
-                position: absolute;
-                top: 0px;
-                left: 50%;
-                transform: translateX(-50%);
+                display: none;
+            }
+        }
+
+        .menu__list.open{
+            left: 0;
+        }
+
+        .logo-item{
+            display: block;
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+}
+/*=======================================================================================================*/
+
+/*=======================================================================================================*/
+/*Mobile Menu*/
+.burger{
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: none;
+    position: absolute;
+    top: 90%;
+    right: 15px;
+    transform: translateY(-50%);
+    z-index: 999;
+    &:hover{
+        .burger-line{
+            background: $white;
+            &::after,
+            &::before{
+                background: $white;
             }
         }
     }
 
+    .burger-line{
+        width: 35px;
+        height: 3px;
+        background: $grey;
+        position: absolute;
+        transition: .2s all;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 4px;
+    
+        &::after,
+        &::before{
+            content: "";
+            width: 100%;
+            position: absolute;
+            height: 3px;
+            transition: .2s all;
+            border-radius: 4px;
+        }
+    
+        &::after{
+            top: -8px;
+            background: $grey;
+        }
+    
+        &::before{
+            top: 8px;
+            background: $grey;
+        }
+    }
+
+    @media(max-width: 768px) {
+        display: block;
+    }
+}
+
+.burger.active{
+
+    .burger-line {
+        width: 35px;
+        transform: translateX(-50%);
+        background-color: transparent;
+        
+        &::after,
+        &::before{
+            width: 35px;
+        }
+
+        &::after{
+            transform: rotate(-45deg) translate(8px, 17px);
+        }
+    
+        &::before{
+            transform: rotate(45deg) translate(5px, -20px);
+        }
+        
+    }
 }
 /*=======================================================================================================*/
