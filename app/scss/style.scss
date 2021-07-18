@@ -10,6 +10,14 @@ html{
     // scroll-behavior: smooth;
 }
 
+@mixin pxHeigh($prop, $px, $height: 1025) {
+	#{$prop}: calc(#{$px} / #{$height} * 100%);
+}
+
+@mixin pxToper($prop, $px, $width: 1680){
+	#{$prop}: calc(#{$px} / #{$width} * 100%);
+}
+
 *,
 *::before,
 *::after {
@@ -67,6 +75,7 @@ h1,h2,h3,h4,p{
     }
 }
 
+
 .purple-btn{
     font-family: 'Sansation';
     font-size: 24px;
@@ -79,15 +88,11 @@ h1,h2,h3,h4,p{
     filter: drop-shadow(0px 0px 15px $purple-btn);
     cursor: pointer;
     padding: 12px 0;
+    transform: scale(1);
     transition: .2s all;
+    
     &:hover{
         filter: drop-shadow(0px 0px 17px $purple-btn);
-    }
-    &:active{
-        transform: scale(0.97);
-    }
-    &:focus{
-        transform: scale(0.97);
     }
 
     @media(max-width: 1441px) {
@@ -98,6 +103,10 @@ h1,h2,h3,h4,p{
         padding: 8px 0;
     }
 }
+
+.purple-btn:active{
+    transform: scale(0.97);
+}
 /*=======================================================================================================*/
 
 
@@ -107,4 +116,11 @@ h1,h2,h3,h4,p{
 @import './parts/main';
 @import './parts/idea';
 @import './parts/modals';
+@import './parts/portfolio';
 /*=======================================================================================================*/
+
+.swiper-slide{
+    img{
+        max-width: 400px;
+    }
+}
