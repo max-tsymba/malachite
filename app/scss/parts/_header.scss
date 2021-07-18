@@ -2,8 +2,13 @@
 /*Main*/
 .header{
     height: 102px;
-    margin-top: 40px;
     position: relative;
+    margin-top: 40px;
+    z-index: 5;
+
+    @media(max-width: 1025px) {
+        height: 90px;
+    }
 }
 /*=======================================================================================================*/
 
@@ -11,7 +16,7 @@
 /*=======================================================================================================*/
 /*Navigation*/
 .menu{
-
+    
     .menu__list{
         display: flex;
 
@@ -23,6 +28,13 @@
             position: absolute;          
             left: 50%;
             transform: translateX(-50%);
+
+            img{
+                @media(max-width: 1025px) {
+                    padding-top: 10px;
+                    width: 200px;
+                }
+            }
         }
 
         .menu__wrapper{
@@ -65,6 +77,10 @@
                     color: $grey;
                     bottom: 0;
                     transition: .2s all;
+
+                    @media(max-width: 1025px) {
+                        font-size: 18px;
+                    }
                 }
 
             }

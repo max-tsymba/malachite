@@ -1,22 +1,163 @@
 /*=======================================================================================================*/
 /*Main*/
-
+.top{
+    position: relative;
+    margin-top: -142px;
+    padding-top: 142px;
+    min-height: 100vh;
+}
 /*=======================================================================================================*/
 
 
 /*=======================================================================================================*/
 /*Content*/
+.main__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    // position: absolute;
+    // max-width: 1402px;
+    // padding: 0 15px;
+    // right: 0;
+    // left: 0;
+    // margin: 0 auto;
+    // top: 52%;
+    // transform: translateY(-50%);
 
-/*=======================================================================================================*/
+    .main__info{
+        max-width: 686px;
 
+        .main__info-title{
+            font-family: 'Days-One';
+            color: $white;
+            font-size: 36px;
+            text-shadow: 0px 0px 2px #000000;
+            padding-bottom: 52px;
 
-/*=======================================================================================================*/
-/*Psevdo Element*/
+            span{
+                color: $purple;
+                text-shadow: 0px 0px 2px #AC3E94;
+            }
 
+            @media(max-width: 1441px) {
+                font-size: 30px;
+            }
+            @media(max-width: 1025px) {
+                padding-bottom: 15px;
+            }
+        }
+
+        .main__info-subtitle{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            color: $grey-light;
+            font-size: 22px;
+            line-height: 26px;
+            padding-bottom: 35px;
+
+            .main__info-paragraph{
+                &:nth-child(1) {
+                    padding-bottom: 36px;
+
+                    @media(max-width: 1025px) {
+                        padding-bottom: 10px;
+                    }
+                }
+                &:nth-child(2) {
+                    padding-bottom: 26px;
+
+                    @media(max-width: 1025px) {
+                        padding-bottom: 0px;
+                    }
+                }
+            }
+
+            @media(max-width: 1441px) {
+                font-size: 18px;
+            }
+
+            @media(max-width: 1025px) {
+                font-size: 14px;
+            }
+        }
+
+        .main__info-buttons{
+            display: flex;
+            justify-content: space-between;
+
+            .main__info-btn{
+                &:nth-child(1) {
+                    padding-left: 35px;
+                    padding-right: 35px;
+                    transition: .2s all;
+                    &:hover{
+                        background-color: $purple-btn;
+                        filter: drop-shadow(0px 0px 8px $purple-btn);
+                    }
+
+                    @media(max-width: 1441px) {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    }
+                }
+                &:nth-child(2) {
+                    padding-left: 65px;
+                    padding-right: 65px;
+                    background-color: $purple-btn;
+
+                    @media(max-width: 1441px) {
+                        padding-left: 55px;
+                        padding-right: 55px;
+                    }
+                }
+            }
+
+            @media(max-width: 1025px) {
+                flex-direction: column;
+                max-width: 320px;
+                margin: 0 auto;
+
+                .main__info-btn {
+                    &:nth-child(1){
+                    margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+
+        @media(max-width: 1441px) {
+            padding-right: 20px;
+            max-width: 586px;
+        }
+    }
+
+    .main__image {
+
+        img{
+            box-shadow: 0px 0px 16px 8px #28052F;
+        }
+    }
+}
 /*=======================================================================================================*/
 
 
 /*=======================================================================================================*/
 /*Arrow*/
+.main__arrow{
+    position: relative;
+    text-align: center;
+    margin-top: 120px;
+    bottom: 50px;
+    transition: .2s all;
+    &:hover{
+        bottom: 40px;
+    }
+    &:active{
+        img{
+            transform: scale(0.97);
+        }
+    }
 
+}
 /*=======================================================================================================*/

@@ -8,13 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="text/html" href="./node_modules/reset-css/reset.css">
+    <!-- <link rel="text/html" href="./node_modules/reset-css/reset.css"> -->
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
 
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="home">
         <div class="container">
 
             <nav class="menu">
@@ -22,7 +22,7 @@
 
                     <ul class="menu__wrapper">
                         <li class="menu__list-item">
-                            <a class="menu__list-link" href="#">Про нас</a>
+                            <a class="menu__list-link" href="#idea">Про нас</a>
                         </li>
                         <li class="menu__list-item">
                             <a class="menu__list-link" href="#">Портфоліо</a>
@@ -54,112 +54,117 @@
 
     <!-- Main Section -->
     <main class="main">
-        <div class="container">
+       
+        <!-- Top Content -->
+        <article class="top">
+            <div class="container">
 
-            <div class="main__content">
-
-                <div class="main__info">
-                    
-                    <div class="main__info-title">
-                        Створюємо <span>неоновий</span> декор під замовлення
+                <div class="main__content">
+    
+                    <div class="main__info">
+                        
+                        <div class="main__info-title">
+                            Створюємо <span>неоновий</span> декор під замовлення
+                        </div>
+    
+                        <div class="main__info-subtitle">
+                            <p class="main__info-paragraph">
+                                MALACHITE FACTORY - провідна компанія <br>дизайнер-виробник неонового декору та рекламних вивісок. Ми спеціалізуємося на виготовленні світлодіодних лед неонових предметів інтер’єру, а саме: текстів, логотипів та малюнків на замовлення. 
+                            </p>
+                            <p class="main__info-paragraph">
+                                Замовляйте у нас свою фантазію, яку ми перетворимо у найякіснішу реальність!
+                            </p>
+                        </div>
+    
+                        <div class="main__info-buttons">
+                            <button class="main__info-btn purple-btn modal-btn">
+                                Розрахувати вартість
+                            </button>
+    
+                            <button class="main__info-btn purple-btn modal-btn">
+                                Замовити
+                            </button>
+                        </div>
                     </div>
-
-                    <div class="main__info-subtitle">
-                        <p class="main__info-paragraph">
-                            MALACHITE FACTORY - провідна компанія дизайнер-виробник неонового декору та рекламних вивісок. Ми спеціалізуємося на виготовленні світлодіодних лед неонових предметів інтер’єру, а саме: текстів, логотипів та малюнків на замовлення. 
-                        </p>
-                        <p class="main__info-paragraph">
-                            Замовляйте у нас свою фантазію, яку ми перетворимо у найякіснішу реальність!
-                        </p>
+    
+                    <div class="main__image">
+                        <img class="media-img" src="./images/gallery/main-img.svg" alt="image">
                     </div>
-
-                    <div class="main__info-buttons">
-                        <button class="main__info-btn purple-btn modal-btn">
-                            Розрахувати вартість
-                        </button>
-
-                        <button class="main__info-btn purple-btn modal-btn">
-                            Замовити
-                        </button>
-                    </div>
+    
                 </div>
+    
+                <div class="purple-circle"></div>
+    
+                <div class="main__arrow">
+                    <a class="main__arrow-link" href="#idea">
+                        <img src="./images/arrow.svg" alt="arrow">
+                    </a>
+                </div>
+    
+            </div>
+        </article>
 
-                <div class="main__image">
-                    <img class="media-img" src="./images/gallery/main-img.svg" alt="image">
+        <!-- Idea Section -->
+        <article class="idea" id="idea">
+            <div class="container">
+
+                <div class="idea__inner">
+
+                    <div class="idea__design">
+
+                        <div class="idea__design-img">
+                            <img class="media-img" src="./images/gallery/about-img.svg" alt="image">
+                        </div>
+
+                        <div class="idea__design-text">
+                            <h2 class="text-rotate">neon-neon-neon-neon-neon-neon</h2>
+                        </div>
+
+                    </div>
+
+                    <div class="idea__info">
+
+                        <h2 class="idea__info-title">Ідея та дизайн</h2>
+                        <div class="idea__info-desc">
+                            <h3 class="idea__desc-title">
+                                Прийшла в голову дивна ідея? <br>
+                                Не проблема! Ми все втілимо в життя.
+                            </h3>
+                            <p class="idea__desc-suptitle">
+                                Залишайте заявку в якій укажіть:
+                            </p>
+                            <ul class="idea__desc-list">
+                                <li class="idea__desc-item">
+                                    Своє ім’я 
+                                </li>
+                                <li class="idea__desc-item">
+                                    Особистий номер телефону
+                                </li>
+                                <li class="idea__desc-item">
+                                    Короткий опис замовлення <br>
+                                    (текст/малюнок, розмір, приклад   
+                                    шрифту, місце розташування)
+                                </li>
+                            </ul>
+                            <p class="idea__desc-attention">
+                                <span>*</span> попередньо Ви можете вирахувати приблизну вартість    
+                                замовлення
+                            </p>
+                        </div>
+
+                        <button class="idea__desc-btn modal-btn">Розрахувати вартіть</button>
+
+                    </div>
+
+                    <div class="blue-circle">
+                    </div>
+
                 </div>
 
             </div>
+        </article>
 
-            <div class="purple-circle"></div>
-
-            <div class="main__arrow">
-                <a class="main__arrow-link" href="#">
-                    <img src="./images/arrow.svg" alt="arrow">
-                </a>
-            </div>
-
-        </div>
     </main>
-
-    <!-- Idea Section -->
-    <section class="idea">
-        <div class="container">
-
-            <div class="idea__inner">
-
-                <div class="idea__design">
-
-                    <div class="idea__design-img">
-                        <img class="media-img" src="./images/gallery/about-img.svg" alt="image">
-                    </div>
-
-                    <div class="idea__design-text">
-                        <h2 class="text-rotate">neon-neon-neon-neon-neon-neon</h2>
-                    </div>
-
-                </div>
-
-                <div class="idea__info">
-
-                    <h2 class="idea__info-title">Ідея та дизайн</h2>
-                    <div class="idea__info-desc">
-                        <h3 class="idea__desc-title">
-                            Прийшла в голову дивна ідея? <br>
-                            Не проблема! Ми все втілимо в життя.
-                        </h3>
-                        <p class="idea__desc-suptitle">
-                            Залишайте заявку в якій укажіть:
-                        </p>
-                        <ul class="idea__desc-list">
-                            <li class="idea__desc-item">
-                                Своє ім’я 
-                            </li>
-                            <li class="idea__desc-item">
-                                Особистий номер телефону
-                            </li>
-                            <li class="idea__desc-item">
-                                Короткий опис замовлення <br>
-                                (текст/малюнок, розмір, приклад   
-                                шрифту, місце розташування)
-                            </li>
-                        </ul>
-                        <p class="idea__desc-attention">
-                            <span>*</span> попередньо Ви можете вирахувати приблизну вартість    
-                            замовлення
-                        </p>
-                    </div>
-
-                    <button class="idea__desc-btn modal-btn">Розрахувати вартіть</button>
-
-                </div>
-
-                <div class="blue-circle">
-                </div>
-
-            </div>
-
-        </div>
-    </section>
     
     <script src="./js/script.min.js"></script>
 </body>
