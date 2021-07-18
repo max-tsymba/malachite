@@ -107,6 +107,7 @@
     .idea__design-img{
         img{
             width: 500px;
+            box-shadow: 0px 0px 10px 2px #5E09E4;
         }
 
         @media(max-width: 1025px) {
@@ -243,6 +244,13 @@
         border: 4px solid #FAF0E6;
         filter: drop-shadow(0px 0px 1px #FAF0E6);
         cursor: pointer;
+        transition: .2s all;
+        &:hover{
+            background-color: $white;
+            color: $black;
+            filter: drop-shadow(0px 0px 1px $black);
+            transform: scale(0.97);
+        }
 
         @media(max-width: 1025px) {
             font-size: 16px;
