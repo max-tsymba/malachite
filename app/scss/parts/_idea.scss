@@ -243,6 +243,9 @@
         &:active{
             transform: scale(0.97);
         }
+        &:focus{
+            transform: scale(0.97);
+        }
 
         @media(max-width: 1025px) {
             font-size: 16px;

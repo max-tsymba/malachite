@@ -16,10 +16,10 @@
 /*=======================================================================================================*/
 /*Navigation*/
 .menu{
-    
+
     .menu__list{
         display: flex;
-
+        position: relative;
         .empty{
             width: 236px;
         }
@@ -43,6 +43,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: .4s all;
 
             .menu__list-item{
                 display: flex;
@@ -81,10 +82,117 @@
                     @media(max-width: 1025px) {
                         font-size: 18px;
                     }
+                    @media(max-width: 769px) {
+                        font-size: 26px;
+                        color: $white;
+                    }
                 }
 
             }
+
+            @media(max-width: 769px) {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index: 100;
+                right: -200%;
+                background-color: #121212;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-bottom: 100px;
+                margin: auto;
+
+                .menu__list-item{
+                    display: block;
+                    text-align: center;
+
+                    a{
+                        width: 100%;
+                        padding: 20px 0;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+
+        .menu__wrapper.open{
+            right: 0;
         }
     }
 }
+/*=======================================================================================================*/
+
+
+/*=======================================================================================================*/
+/*Mobile Menu*/
+.burger{
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    display: none;
+
+    @media(max-width: 769px) {
+        display: block;
+    }
+}
+
+.burger-line{
+    width: 35px;
+    height: 3px;
+    background: $grey;
+    position: absolute;
+    transition: .3s all;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 4px;
+
+    &::after,
+    &::before{
+        content: "";
+        position: absolute;
+        height: 3px;
+        transition: .3s all;
+        border-radius: 4px;
+    }
+
+    &::after{
+        top: -8px;
+        background: $grey;
+        width: 35px;
+    }
+
+    &::before{
+        top: 8px;
+        background: $grey;
+        width: 35px;
+    }
+
+}
+
+.burger.active{
+    .burger-line {
+        width: 35px;
+        transform: translateX(-50%);
+        background-color: transparent;
+
+        &::after{
+            transform: rotate(-45deg) translate(8px, 17px);
+        }
+    
+        &::before{
+            transform: rotate(45deg) translate(5px, -20px);
+        }
+        
+    }
+}
+
 /*=======================================================================================================*/

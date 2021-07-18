@@ -6,6 +6,20 @@
     padding-top: 142px;
     min-height: 100vh;
 }
+
+.purple-circle{
+    position: absolute;
+    top: 230px;
+    height: 0px;
+    width: 120px;
+    box-shadow: $purple-element;
+    right: -100px;
+
+    @media(max-width: 769px) {
+       top: 50%;
+       transform: translateY(-50%);
+    }
+}
 /*=======================================================================================================*/
 
 
@@ -16,14 +30,6 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 100px;
-    // position: absolute;
-    // max-width: 1402px;
-    // padding: 0 15px;
-    // right: 0;
-    // left: 0;
-    // margin: 0 auto;
-    // top: 52%;
-    // transform: translateY(-50%);
 
     .main__info{
         max-width: 686px;
@@ -45,6 +51,9 @@
             }
             @media(max-width: 1025px) {
                 padding-bottom: 15px;
+            }
+            @media(max-width: 376px) {
+                font-size: 24px;
             }
         }
 
@@ -76,9 +85,11 @@
             @media(max-width: 1441px) {
                 font-size: 18px;
             }
-
             @media(max-width: 1025px) {
                 font-size: 14px;
+            }
+            @media(max-width: 376px) {
+                font-size: 12px;
             }
         }
 
@@ -105,6 +116,10 @@
                     padding-left: 65px;
                     padding-right: 65px;
                     background-color: $purple-btn;
+                    &:hover{
+                        background-color: transparent;
+                        filter: drop-shadow(0px 0px 8px $purple-btn);
+                    }
 
                     @media(max-width: 1441px) {
                         padding-left: 55px;
@@ -130,12 +145,38 @@
             padding-right: 20px;
             max-width: 586px;
         }
+
+        @media(max-width: 769px) {
+            padding-right: 0;
+            max-width: 586px;
+            text-align: center;
+        }
+        @media(max-width: 376px) {
+            text-align: left;
+        }
+
+        
+    }
+
+    @media(max-width: 769px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .main__image {
 
         img{
             box-shadow: 0px 0px 16px 8px #28052F;
+            transition: .2s all;
+            &:hover{
+                box-shadow: 0px 0px 16px 18px #28052F;
+            }
+        }
+
+        @media(max-width: 769px) {
+            margin-bottom: 50px;
         }
     }
 }
