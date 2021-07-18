@@ -9,6 +9,9 @@
     @media(max-width: 1025px) {
         height: 90px;
     }
+    @media(max-width: 769px) {
+        margin-top: 15px;
+    }
 }
 /*=======================================================================================================*/
 
@@ -98,12 +101,13 @@
                 height: 100vh;
                 z-index: 100;
                 right: -200%;
-                background-color: #121212;
+                background: rgba(0, 0, 0, 0.7);
+                backdrop-filter: blur(6px);
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                padding-bottom: 100px;
                 margin: auto;
+                overflow-y: auto;
 
                 .menu__list-item{
                     display: block;
@@ -135,7 +139,7 @@
     display: inline-block;
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 30px;
     transform: translate(-50%, -50%);
     z-index: 100;
     display: none;

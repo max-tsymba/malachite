@@ -56,6 +56,58 @@
         </div>
     </header>
 
+    <!-- Modals -->
+    <section class="modals">
+
+        <!-- Contact -->
+        <form class="modal__form" action="" novalidate>
+
+            <div class="modal__top">
+                <div class="modal__top-title">
+                    ВАША ЗАЯВКА
+                </div>
+                <button class="modal__top-close" type="button">
+                    <div></div>
+                    <div></div>
+                </button>
+            </div>
+
+            
+            <div class="input-wrapper">
+                <div class="form__group">
+                    <input class="modal-input" type="text" name="name" autocomplete="off" required />
+                    <label class="label-name" for="name">
+                      <span class="label__content">Ім’я</span>
+                    </label>
+                </div>
+                <div class="form-error">Необходимо заполнить пустое поле</div>
+            </div>
+
+            <div class="input-wrapper">
+                <div class="form__group">
+                    <input class="modal-input" type="tel" name="phone" autocomplete="off" required />
+                    <label class="label-name" for="phone">
+                      <span class="label__content">Телефон</span>
+                    </label>
+                </div>
+                <div class="form-error">Необходимо заполнить пустое поле</div>
+            </div>
+
+            <div class="input-wrapper text-wrapper">
+                <div class="text-group">
+                    <textarea rows="1" class="textarea" name="message" id="textarea" placeholder="Якою ви бачите свою вивіску?"></textarea>
+                </div>
+                <div class="form-error">Необходимо заполнить пустое поле</div>
+            </div>
+
+            <div class="form__btn-group">
+                <button class="form-btn" type="submit">Надiслати</button>
+            </div>
+            
+        </form>
+
+    </section>
+
     <!-- Main Section -->
     <main class="main">
        
