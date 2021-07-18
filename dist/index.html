@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <title>Malachite Factory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="text/html" href="./node_modules/reset-css/reset.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="home">
+        <div class="container">
+
+            <nav class="menu">
+                <ul class="menu__list">
+
+                    <ul class="menu__wrapper">
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#idea">Про нас</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#">Портфоліо</a>
+                        </li>
+                        <li class="empty">
+                            <div class="empty-div"></div>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#">Як замовити?</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#">Зв’язатися</a>
+                        </li>
+                    </ul>
+                    
+                    <ul class="menu__logo">
+                        <li class="menu__logo-item">
+                            <a class="menu__logo-link" href="/">
+                                <img src="./images/logo.svg" alt="logo">
+                            </a>
+                        </li>
+                    </ul>
+
+                </ul>
+
+                <div class="burger" id="burger">
+                    <div class="burger-line"></div>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Modals -->
+    <section class="modals">
+
+        <!-- Contact -->
+        <form class="modal__form" action="" novalidate>
+
+            <div class="modal__top">
+                <div class="modal__top-title">
+                    ВАША ЗАЯВКА
+                </div>
+                <button class="modal__top-close" type="button">
+                    <div></div>
+                    <div></div>
+                </button>
+            </div>
+
+            
+            <div class="input-wrapper">
+                <div class="form__group">
+                    <input class="modal-input" type="text" name="name" autocomplete="off" required />
+                    <label class="label-name" for="name">
+                      <span class="label__content">Ім’я</span>
+                    </label>
+                </div>
+                <div class="form-error">Необходимо заполнить пустое поле</div>
+            </div>
+
+            <div class="input-wrapper">
+                <div class="form__group">
+                    <input class="modal-input" type="tel" name="phone" autocomplete="off" required />
+                    <label class="label-name" for="phone">
+                      <span class="label__content">Телефон</span>
+                    </label>
+                </div>
+                <div class="form-error">Необходимо заполнить пустое поле</div>
+            </div>
+
+            <div class="input-wrapper text-wrapper">
+                <div class="text-group">
+                    <textarea rows="1" class="textarea" name="message" id="textarea" placeholder="Якою ви бачите свою вивіску?"></textarea>
+                </div>
+                <div class="form-error">Необходимо заполнить пустое поле</div>
+            </div>
+
+            <div class="form__btn-group">
+                <button class="form-btn" type="submit">Надiслати</button>
+            </div>
+            
+        </form>
+
+    </section>
+
+    <!-- Main Section -->
+    <main class="main">
+       
+        <!-- Top Content -->
+        <article class="top">
+            <div class="container">
+
+                <div class="main__content">
+    
+                    <div class="main__info">
+                        
+                        <div class="main__info-title">
+                            Створюємо <span>неоновий</span> декор під замовлення
+                        </div>
+    
+                        <div class="main__info-subtitle">
+                            <p class="main__info-paragraph">
+                                MALACHITE FACTORY - провідна компанія <br>дизайнер-виробник неонового декору та рекламних вивісок. Ми спеціалізуємося на виготовленні світлодіодних лед неонових предметів інтер’єру, а саме: текстів, логотипів та малюнків на замовлення. 
+                            </p>
+                            <p class="main__info-paragraph">
+                                Замовляйте у нас свою фантазію, яку ми перетворимо у найякіснішу реальність!
+                            </p>
+                        </div>
+    
+                        <div class="main__info-buttons">
+                            <button class="main__info-btn purple-btn modal-btn">
+                                Розрахувати вартість
+                            </button>
+    
+                            <button class="main__info-btn purple-btn modal-btn">
+                                Замовити
+                            </button>
+                        </div>
+                    </div>
+    
+                    <div class="main__image">
+                        <img class="media-img" src="./images/gallery/main-img.svg" alt="image">
+                    </div>
+    
+                </div>
+    
+                <div class="purple-circle"></div>
+    
+                <div class="main__arrow">
+                    <a class="main__arrow-link" href="#idea">
+                        <img src="./images/arrow.svg" alt="arrow">
+                    </a>
+                </div>
+    
+            </div>
+        </article>
+
+        <!-- Idea Section -->
+        <article class="idea" id="idea">
+            <div class="container">
+
+                <div class="idea__inner">
+
+                    <div class="idea__design">
+
+                        <div class="idea__design-img">
+                            <img class="media-img" src="./images/gallery/about-img.svg" alt="image">
+                        </div>
+
+                        <div class="idea__design-text">
+                            <h2 class="text-rotate">neon-neon-neon-neon-neon-neon</h2>
+                        </div>
+
+                    </div>
+
+                    <div class="idea__info">
+
+                        <h2 class="idea__info-title">Ідея та дизайн</h2>
+                        <div class="idea__info-desc">
+                            <h3 class="idea__desc-title">
+                                Прийшла в голову дивна ідея? <br>
+                                Не проблема! Ми все втілимо в життя.
+                            </h3>
+                            <p class="idea__desc-suptitle">
+                                Залишайте заявку в якій укажіть:
+                            </p>
+                            <ul class="idea__desc-list">
+                                <li class="idea__desc-item">
+                                    Своє ім’я 
+                                </li>
+                                <li class="idea__desc-item">
+                                    Особистий номер телефону
+                                </li>
+                                <li class="idea__desc-item">
+                                    Короткий опис замовлення <br>
+                                    (текст/малюнок, розмір, приклад   
+                                    шрифту, місце розташування)
+                                </li>
+                            </ul>
+                            <p class="idea__desc-attention">
+                                <span>*</span> попередньо Ви можете вирахувати приблизну вартість    
+                                замовлення
+                            </p>
+                        </div>
+
+                        <button class="idea__desc-btn modal-btn">Розрахувати вартіть</button>
+
+                    </div>
+
+                    <div class="blue-circle">
+                    </div>
+
+                </div>
+
+            </div>
+        </article>
+
+        <!-- Portfolio -->
+        <article class="portfolio">
+            <div class="container">
+
+                <div class="portfolio__inner">
+                    <div class="portfolio__title">portfolio</div>
+
+                    <div class="portfolio__swiper">
+
+                        <div class="portfolio__container swiper-container">
+    
+                            <div class="portfolio__slider swiper-wrapper">
+    
+                                <div class="portfolio__slide swiper-slide">
+                                    <div class="porfolio__slider-image">
+                                        <img src="./images/slider/slide-1.svg" alt="image">
+
+                                        <div class="portfolio__block">
+                                            <div class="portfolio__block-title">
+                                                “Дуже гарно, дякую отзыв. Дуже гарно, дякую отзыв. Дуже гарно, дякую отзыв. Дуже гарно, дякую отзыв. Дуже гарно, дякую отзыв. ”
+                                            </div>
+                                            <a class="portfolio__block-social" href="#">
+                                                <img src="./images/insta.svg" alt="insta">
+                                            </a>
+                                            <div class="portfolio__block-price">
+                                                2000 ₴ - 3000 ₴
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="portfolio__slide swiper-slide">
+                                    <div class="porfolio__slider-image">
+                                        <img src="./images/slider/slide-2.svg" alt="image">
+                                        <div class="portfolio__block">
+                                            <div class="portfolio__block-title">
+                                                “Дуже гарно, дякую отзыв. Дуже гарно, дякую отзыв. Дуже гарно, дякую отзыв. Дуже гарно, дякую отзыв. Дуже гарно, дякую отзыв. ”
+                                            </div>
+                                            <a class="portfolio__block-social" href="#">
+                                                <img src="./images/insta.svg" alt="insta">
+                                            </a>
+                                            <div class="portfolio__block-price">
+                                                2000 ₴ - 3000 ₴
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="portfolio__slide swiper-slide">
+                                    <div class="porfolio__slider-image">
+                                        <img src="./images/slider/slide-2.svg" alt="image">
+                                        <div class="portfolio__block">
+                                            <div class="portfolio__block-title">
+                                                “Дуже гарно, дякую отзыв. Дуже гарно, дякую отзыв. Дуже гарно, дякую отзыв. Дуже гарно, дякую отзыв. Дуже гарно, дякую отзыв. ”
+                                            </div>
+                                            <a class="portfolio__block-social" href="#">
+                                                <img src="./images/insta.svg" alt="insta">
+                                            </a>
+                                            <div class="portfolio__block-price">
+                                                2000 ₴ - 3000 ₴
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="portfolio__slide swiper-slide">
+                                    <div class="porfolio__slider-image">
+                                        <img src="./images/slider/slide-1.svg" alt="image">
+                                        <div class="portfolio__block">
+                                            <div class="portfolio__block-title">
+                                                “Дуже гарно, дякую отзыв. Дуже гарно, дякую отзыв. Дуже гарно, дякую отзыв. Дуже гарно, дякую отзыв. Дуже гарно, дякую отзыв. ”
+                                            </div>
+                                            <a class="portfolio__block-social" href="#">
+                                                <img src="./images/insta.svg" alt="insta">
+                                            </a>
+                                            <div class="portfolio__block-price">
+                                                2000 ₴ - 3000 ₴
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="portfolio__slide swiper-slide">
+                                    <div class="porfolio__slider-image">
+                                        <img src="./images/slider/slide-2.svg" alt="image">
+                                        <div class="portfolio__block">
+                                            <div class="portfolio__block-title">
+                                                “Дуже гарно, дякую отзыв. Дуже гарно, дякую отзыв. Дуже гарно, дякую отзыв. Дуже гарно, дякую отзыв. Дуже гарно, дякую отзыв. ”
+                                            </div>
+                                            <a class="portfolio__block-social" href="#">
+                                                <img src="./images/insta.svg" alt="insta">
+                                            </a>
+                                            <div class="portfolio__block-price">
+                                                2000 ₴ - 3000 ₴
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+    
+                        </div>
+    
+                        <div class="prev-btn">
+                            <img src="./images/arrow.svg" alt="">
+                        </div>
+                        <div class="next-btn">
+                            <img src="./images/arrow.svg" alt="">
+                        </div>
+    
+                    </div>
+
+                                    
+                    <div class="portfolio__btn">
+                        <a class="portfolio__btn-link" href="#">Бiльше</a>
+                    </div>
+    
+                </div>
+
+            </div>
+
+            <div class="green-circle"></div>
+
+        </article>
+
+    </main>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/script.min.js"></script>
+</body>
+</html>
