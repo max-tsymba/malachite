@@ -37,6 +37,9 @@
                     padding-top: 10px;
                     width: 200px;
                 }
+                @media(max-width: 376px) {
+                    width: 150px;
+                }
             }
         }
 
@@ -146,6 +149,13 @@
 
     @media(max-width: 769px) {
         display: block;
+    }
+
+    @media(max-width: 426px) {
+        right: 0;
+    }
+    @media(max-width: 376px) {
+        top: 40%;
     }
 }
 

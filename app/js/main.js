@@ -59,4 +59,5 @@ window.addEventListener('DOMContentLoaded', () => {
     sliderBack.addEventListener('mouseenter', (e) => {
         mySlider.autoplay.stop();
     })
+
 });

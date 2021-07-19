@@ -11,13 +11,13 @@ const mobileMenuOpener = (burgerID, menuClass, menuLinksClass) => {
 
             burgerBtn.classList.add('active');
             menu.classList.add('open');
-            document.querySelector('body').style.overflowY = 'hidden';
+            document.body.style.overflowY = 'hidden';
             isOpen = false;
         } else {
             
             burgerBtn.classList.remove('active');
             menu.classList.remove('open');
-            document.querySelector('body').style.overflowY = 'scroll';
+            document.body.style.overflowY = 'scroll';
             isOpen = true;
         }
     });
@@ -27,7 +27,7 @@ const mobileMenuOpener = (burgerID, menuClass, menuLinksClass) => {
 
             burgerBtn.classList.remove('active');
             menu.classList.remove('open');
-            document.querySelector('body').style.overflowY = 'scroll';
+            document.body.style.overflowY = 'scroll';
             isOpen = true;  
         });
     });
