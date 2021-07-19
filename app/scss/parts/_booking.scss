@@ -25,7 +25,7 @@
 /*Content*/
 .booking__title-wrapper{
     text-align: center;
-    padding-top: 50px;
+    padding-top: 60px;
     padding-bottom: 11px;  
 
     .booking__title-group{
@@ -100,7 +100,6 @@
     flex-wrap: nowrap;
     @media(max-height: 1025px){
         @include toHeigh(margin-top, 137, 900px);
-        @include toHeigh(margin-bottom, 120, 900px);
     }
     @media(max-width: 1441px) {
         flex-wrap: wrap;
