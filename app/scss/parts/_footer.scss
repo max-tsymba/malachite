@@ -115,6 +115,13 @@
                 line-height: 48px;
                 text-align: center;
                 box-shadow: 0px 0px 8px $blue;
+                transition: .2s all;
+
+                @media(min-width: 769px) {
+                    &:hover{
+                        box-shadow: 0px 0px 10px 2px $blue;
+                    }
+                }
 
                 img{
                     vertical-align: middle;
@@ -126,9 +133,17 @@
                 font-family: 'Montserrat', sans-serif;
                 font-size: 18px;
                 color: $grey;
+                transition: .2s all;
+
                 @media(max-width: 376px){
                     padding-top: 10px;
                     margin-left: 0;
+                }
+
+                @media(min-width: 769px) {
+                    &:hover{
+                        color: $white;
+                    }
                 }
             }
 
