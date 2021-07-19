@@ -23,26 +23,26 @@
 
                     <ul class="menu__wrapper">
                         <li class="menu__list-item">
-                            <a class="menu__list-link" href="#idea">Про нас</a>
+                            <a class="menu__list-link" href="#about">Про нас</a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="menu__list-link" href="#">Портфоліо</a>
+                            <a class="menu__list-link" href="#portfolio">Портфоліо</a>
                         </li>
                         <li class="empty">
                             <div class="empty-div"></div>
                         </li>
                         <li class="menu__list-item">
-                            <a class="menu__list-link" href="#">Як замовити?</a>
+                            <a class="menu__list-link" href="#booking">Як замовити?</a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="menu__list-link" href="#">Зв’язатися</a>
+                            <a class="menu__list-link" href="#contact">Зв’язатися</a>
                         </li>
                     </ul>
                     
                     <ul class="menu__logo">
                         <li class="menu__logo-item">
                             <a class="menu__logo-link" href="/">
-                                <img src="./images/logo.svg" alt="logo">
+                                <img src="./images/logo-png.png" alt="logo">
                             </a>
                         </li>
                     </ul>
@@ -107,6 +107,97 @@
             
         </form>
 
+        <!-- Calculate -->
+        <form class="modal__form" action="" novalidate>
+
+            <div class="modal__top">
+                <div class="modal__top-title">
+                    ВАША ЗАЯВКА
+                </div>
+                <button class="modal__top-close" type="button">
+                    <div></div>
+                    <div></div>
+                </button>
+            </div>
+
+            <div class="input-wrapper">
+                <div class="form__group">
+                    <input class="modal-input" type="text" name="name" autocomplete="off" required />
+                    <label class="label-name" for="name">
+                      <span class="label__content">Ім’я</span>
+                    </label>
+                </div>
+                <div class="form-error">Необходимо заполнить пустое поле</div>
+            </div>
+
+            <div class="input-wrapper">
+                <div class="form__group">
+                    <input class="modal-input" type="tel" name="phone" autocomplete="off" required />
+                    <label class="label-name" for="phone">
+                      <span class="label__content">Телефон</span>
+                    </label>
+                </div>
+                <div class="form-error">Необходимо заполнить пустое поле</div>
+            </div>
+
+            <div class="input-wrapper">
+                <div class="form__group">
+                    <select class="form-select" name="picture">
+                        <option value="1">Текст</option>
+                        <option value="2">Рисунок</option>
+                    </select>
+                </div>
+                <div class="form-error">Необходимо заполнить пустое поле</div>
+            </div>
+            
+            <div class="input-wrapper">
+                <div class="form__group">
+                    <input class="modal-input" type="number" name="width" autocomplete="off" required />
+                    <label class="label-name" for="width">
+                      <span class="label__content">Ширина, мм</span>
+                    </label>
+                </div>
+                <div class="form-error">Необходимо заполнить пустое поле</div>
+            </div>
+
+            <div class="input-wrapper">
+                <div class="form__group">
+                    <input class="modal-input" type="number" name="height" autocomplete="off" required />
+                    <label class="label-name" for="height">
+                      <span class="label__content">Высота, мм</span>
+                    </label>
+                </div>
+                <div class="form-error">Необходимо заполнить пустое поле</div>
+            </div>
+
+            <div class="input-wrapper">
+                <div class="form__group">
+                    <select class="form-select" name="fonts">
+                        <option value="1">fonts fonts</option>
+                        <option value="2">fonts fonts</option>
+                        <option value="3">fonts fonts</option>
+                        <option value="4">fonts fonts</option>
+                    </select>
+                </div>
+                <div class="form-error">Необходимо заполнить пустое поле</div>
+            </div>
+
+            <div class="input-wrapper">
+                <div class="form__group">
+                    <select class="form-select" name="place">
+                        <option value="1">Для приміщення</option>
+                        <option value="2">на вулицю</option>
+                    </select>
+                </div>
+                <div class="form-error">Необходимо заполнить пустое поле</div>
+            </div>
+
+            <div class="form__btn-group">
+                <button class="form-btn" type="submit">Надiслати</button>
+            </div>
+            
+        </form>
+
     </section>
 
     <!-- Main Section -->
@@ -153,7 +244,7 @@
                 <div class="purple-circle"></div>
     
                 <div class="main__arrow">
-                    <a class="main__arrow-link" href="#idea">
+                    <a class="main__arrow-link" href="#about">
                         <img src="./images/arrow.svg" alt="arrow">
                     </a>
                 </div>
@@ -162,7 +253,7 @@
         </article>
 
         <!-- Idea Section -->
-        <article class="idea" id="idea">
+        <article class="idea" id="about">
             <div class="container">
 
                 <div class="idea__inner">
@@ -222,7 +313,7 @@
         </article>
 
         <!-- Portfolio -->
-        <article class="portfolio">
+        <article class="portfolio" id="portfolio">
             <div class="container">
 
                 <div class="portfolio__inner">
@@ -346,7 +437,155 @@
 
         </article>
 
+        <!-- Booking -->
+        <article class="booking" id="booking">
+            <div class="container">
+
+                <div class="booking__inner">
+
+                    
+                    <div class="booking__title-wrapper">
+                        <div class="booking__title-group">
+                            <div class="booking__rect-left"></div>
+                            <div class="booking__title-text">Як замовити?</div>
+                            <div class="booking__rect-right"></div>
+                        </div>
+                    </div>
+
+                    <ul class="booking__list">
+                        <li class="booking__list-item">
+                            <div class="booking__list-logo">
+                                <img src="./images/list/list-1.svg" alt="logo">
+                            </div>
+                            <div class="booking__list-title">Заявка</div>
+                            <div class="booking__list-text">Натисніть нижче кнопку “Замовити” і введіть усю інформацію, яка потребується для подальшого зв’язку та виготовлення замовлення.</div>
+                        </li>
+
+                        <li class="booking__list-item">
+                            <div class="booking__list-logo">
+                                <img src="./images/list/list-2.svg" alt="logo">
+                            </div>
+                            <div class="booking__list-title">Оплата</div>
+                            <div class="booking__list-text">Перед початком виготовлення сплачується 50% від вартості виробу. Друга частина суми доплачується перед відправкою або при отриманні товару. Оплата здіснюється на картку ПриватБанку.</div>
+                        </li>
+
+                        <li class="booking__list-item">
+                            <div class="booking__list-logo">
+                                <img src="./images/list/list-3.svg" alt="logo">
+                            </div>
+                            <div class="booking__list-title">Виготовлення</div>
+                            <div class="booking__list-text">Використовуються якісні, перевірені матеріали.Будь-який текст, логотип чи малюнок виготовляються від 3 до 7 робочих днів, залежить від складності виробу.</div>
+                        </li>
+
+                        <li class="booking__list-item">
+                            <div class="booking__list-logo">
+                                <img src="./images/list/list-4.svg" alt="logo">
+                            </div>
+                            <div class="booking__list-title">Доставка</div>
+                            <div class="booking__list-text">Коли виріб повністю готовий, він проходить перевірку на працездатність. І тільки після підтвердження якості формується відправка замовнику.Доставка здійснюється Новою Поштою.</div>
+                        </li>
+                    </ul>
+
+                    <div class="booking__btn">
+                        <a class="booking__link purple-btn" href="#">Замовити</a>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div class="red-circle"></div>
+        </article>
+
     </main>
+    
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+
+            <div class="footer__inner">
+                <div class="footer__title">
+                    contact us
+                </div>
+
+                <div class="footer__social">
+
+                    <div class="footer__social-item">
+                        <div class="footer__social-title">
+                            Email
+                        </div>
+
+                        <div class="footer__social-botom">
+                            <div class="footer__social-logo">
+                                <img src="./images/social/email.svg" alt="email">
+                            </div>
+                            
+                            <a class="footer__social-link" href="mailto:info@neon_by_malachite">
+                                info@neon_by_malachite
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer__social-item">
+                        <div class="footer__social-title">
+                            Instagram
+                        </div>
+
+                        <div class="footer__social-botom">
+                            <div class="footer__social-logo">
+                                <img src="./images/social/insta.svg" alt="insta">
+                            </div>
+                            
+                            <a class="footer__social-link" href="#">
+                                @neon_by_malachite
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer__social-item">
+                        <div class="footer__social-title">
+                            Facebook
+                        </div>
+
+                        <div class="footer__social-botom">
+                            <div class="footer__social-logo">
+                                <img src="./images/social/facebook.svg" alt="insta">
+                            </div>
+                            
+                            <a class="footer__social-link" href="#">
+                                neon_by_malachite
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="footer__copyright">
+                    <div class="footer__copyright-info">
+                        Copyright © 2021
+                        <span>
+                            <a class="footer__copyright-link" href="/">Malachite 
+                            <span>
+                                Factory.
+                            </span>
+                        </a>
+                        </span>
+                    </div>
+                    <div class="footer__copyright-powered">
+                        Powered by
+                        <span>
+                            <a class="footer__powered-link" href="#">Vladislav Zhylenko</a>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="green-footer-circle"></div>
+        <div class="pink-footer-circle"></div>
+    </footer>
     
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/script.min.js"></script>
