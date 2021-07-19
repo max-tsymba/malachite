@@ -3,7 +3,20 @@
 .portfolio{
     position: relative;
     min-height: 100vh;
-    overflow: hidden;
+}
+
+.green-circle{
+    position: absolute;
+    height: 0px;
+    width: 120px;
+    box-shadow: $green-element;
+    left: -120px;
+    top: 0;
+
+    @media(max-width: 769px) {
+       top: 50%;
+       transform: translateY(-50%);
+    }
 }
 /*=======================================================================================================*/
 
