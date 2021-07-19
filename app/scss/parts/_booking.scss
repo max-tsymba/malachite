@@ -87,6 +87,8 @@
         @media(min-width: 769px) {
             &:hover{
                 background-color: transparent;
+                filter: drop-shadow(0px 0px 8px $purple-btn);
+                box-shadow: 0px 0px 8px $purple-btn;
             }
         }
         @media(max-width: 1441px) {
@@ -124,10 +126,15 @@
                 background: $green-gradient;
                 box-shadow: 0px 0px 8px #0BDA51;
                 transition: .2s all;
+            }
 
-                @media(min-width: 769px) {
-                    &:hover{
+            @media(min-width: 769px) {
+                
+                &:hover{
+                    .booking__list-logo {
+
                         box-shadow: 0px 0px 15px 2px #0BDA51;
+
                     }
                 }
             }
@@ -139,10 +146,15 @@
                 background: $violet-gradient;
                 box-shadow: 0px 0px 8px #3B1CFF;
                 transition: .2s all;
+            }
 
-                @media(min-width: 769px) {
-                    &:hover{
+            @media(min-width: 769px) {
+                
+                &:hover{
+                    .booking__list-logo {
+
                         box-shadow: 0px 0px 15px 2px #3B1CFF;
+
                     }
                 }
             }
@@ -154,10 +166,15 @@
                 background: $yellow-gradient;
                 box-shadow: 0px 0px 8px #DA870B;
                 transition: .2s all;
+            }
 
-                @media(min-width: 769px) {
-                    &:hover{
+            @media(min-width: 769px) {
+                
+                &:hover{
+                    .booking__list-logo {
+
                         box-shadow: 0px 0px 15px 2px #DA870B;
+
                     }
                 }
             }
@@ -169,10 +186,15 @@
                 background: $pink-gradient;
                 box-shadow: 0px 0px 8px #DA0B6E;
                 transition: .2s all;
+            }
 
-                @media(min-width: 769px) {
-                    &:hover{
+            @media(min-width: 769px) {
+                
+                &:hover{
+                    .booking__list-logo {
+
                         box-shadow: 0px 0px 15px 2px #DA0B6E;
+
                     }
                 }
             }
@@ -218,6 +240,8 @@
         @media(min-width: 769px) {
             &:hover{
                 background: rgba(199, 195, 195, 0.2);
+
+                
             }
         }
 

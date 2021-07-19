@@ -30,9 +30,6 @@ window.addEventListener('DOMContentLoaded', () => {
         speed: 1000,
 
         breakpoints: {
-            1501: {
-                spaceBetween: 12,
-            },
             1025: {
                 slidesPerView: 3,
             },
