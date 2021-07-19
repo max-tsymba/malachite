@@ -10,12 +10,10 @@ html{
     // scroll-behavior: smooth;
 }
 
-@mixin pxHeigh($prop, $px, $height: 1025) {
-	#{$prop}: calc(#{$px} / #{$height} * 100%);
-}
-
-@mixin pxToper($prop, $px, $width: 1680){
-	#{$prop}: calc(#{$px} / #{$width} * 100%);
+@mixin toHeigh($prop, $px, $media, $height: 1025) {
+	@media(min-height: #{$media}) {
+        #{$prop}: calc(100vh - 1070px + (#{$px} / #{$height} * 100%));
+    }
 }
 
 *,
@@ -117,10 +115,5 @@ h1,h2,h3,h4,p{
 @import './parts/idea';
 @import './parts/modals';
 @import './parts/portfolio';
+@import './parts/booking';
 /*=======================================================================================================*/
-
-.swiper-slide{
-    img{
-        max-width: 400px;
-    }
-}

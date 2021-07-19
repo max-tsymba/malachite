@@ -1,0 +1,198 @@
+/*=======================================================================================================*/
+/*Main*/
+.booking{
+    position: relative;
+    min-height: 100vh;
+}
+
+.red-circle{
+    position: absolute;
+    height: 0px;
+    width: 120px;
+    top: 0;
+    box-shadow: $red-element;
+    right: -200px;
+
+    @media(max-width: 769px) {
+       top: 50%;
+       transform: translateY(-50%);
+    }
+}
+/*=======================================================================================================*/
+
+
+/*=======================================================================================================*/
+/*Content*/
+.booking__title-wrapper{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 11px;  
+
+    .booking__title-group{
+        position: relative;
+        display: inline-block;
+        margin: 0 auto;
+    
+        .booking__title-text{
+            font-family: 'Days-One';
+            color: $white;
+            text-align: center;
+            font-size: 48px;
+
+            @media(max-width: 769px) {
+                font-size: 32px;
+            }
+
+            @media(max-width: 376px) {
+                font-size: 22px;
+            }
+        }
+    
+        .booking__rect-left{
+            position: absolute;
+            top: -10px;
+            left: -30px;
+            width: 160px;
+            height: 40px;
+            border-left: 1px solid $orange;
+            border-top: 1px solid $orange;
+            filter: drop-shadow(0px 0px 4px $orange);
+        }
+    
+        .booking__rect-right{
+            position: absolute;
+            right: -30px;
+            bottom: -10px;
+            width: 160px;
+            height: 40px;
+            border-right: 1px solid $orange;
+            border-bottom: 1px solid $orange;
+            filter: drop-shadow(0px 0px 4px $orange);
+        }
+    
+    }
+}
+
+.booking__btn{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 108px;
+
+    .booking__link{
+        background-color: $purple-btn;
+        width: 252px;
+        display: inline-block;
+        text-align: center;
+        &:hover{
+            background-color: transparent;
+        }
+    }
+}
+/*=======================================================================================================*/
+
+
+/*=======================================================================================================*/
+/*Items*/
+.booking__list{
+    display: flex;
+    justify-content: space-between;
+    margin: 137px 0 100px 0;
+    flex-wrap: nowrap;
+    @media(max-height: 1025px){
+        @include toHeigh(margin-top, 137, 900px);
+        @include toHeigh(margin-bottom, 120, 900px);
+    }
+    @media(max-width: 1441px) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    li{
+        &:nth-child(1) {
+
+            .booking__list-logo {
+                background: $green-gradient;
+                box-shadow: 0px 0px 8px #0BDA51;
+            }
+        }
+
+        &:nth-child(2) {
+
+            .booking__list-logo {
+                background: $violet-gradient;
+                box-shadow: 0px 0px 8px #3B1CFF;
+            }
+        }
+
+        &:nth-child(3) {
+
+            .booking__list-logo {
+                background: $yellow-gradient;
+                box-shadow: 0px 0px 8px #DA870B;
+            }
+        }
+
+        &:nth-child(4) {
+
+            .booking__list-logo {
+                background: $pink-gradient;
+                box-shadow: 0px 0px 8px #DA0B6E;
+            }
+        }
+    }
+
+    .booking__list-item{
+        margin: 0 5px;
+        text-align: center;
+        background: rgba(146, 146, 146, 0.2);
+        max-width: 318px;
+        min-height: 509px;
+        padding: 60px 40px 15px 40px;
+
+        .booking__list-logo{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            line-height: 150px;
+
+            img{
+                vertical-align: middle;
+            }
+        }
+
+        .booking__list-title{
+            font-family: 'Sansation';
+            font-weight: 400;
+            font-size: 30px;
+            color: $white;
+            padding: 30px 0 40px 0;
+        }
+
+        .booking__list-text{
+            font-family:  'Roboto';
+            font-size: 18px;
+            color: $grey;
+        }
+
+        @media(max-width: 1441px) {
+            max-width: 500px;
+            margin: 0 20px;
+            margin-bottom: 40px;
+        }
+        @media(max-width: 426px) {
+            padding: 60px 10px 15px 10px;
+
+            .booking__list-logo{
+                width: 100px;
+                height: 100px;
+                line-height: 100px;
+                img{
+                    width: 50px;
+                }
+            }
+        }
+    }
+}
+/*=======================================================================================================*/
