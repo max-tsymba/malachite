@@ -61,7 +61,7 @@
     <section class="modals">
 
         <!-- Contact -->
-        <form class="modal__form" id="contact-form" action="" novalidate style="display: none;">
+        <form class="modal__form" id="contact-form" action="" novalidate>
 
             <div class="modal__top">
                 <div class="modal__top-title">
@@ -95,8 +95,11 @@
             </div>
 
             <div class="input-wrapper text-wrapper">
-                <div class="text-group">
-                    <textarea rows="1" class="textarea" name="message" id="textarea" placeholder="Якою ви бачите свою вивіску?"></textarea>
+                <div class="form__group text-group">
+                    <textarea rows="1" class="textarea" name="message" id="textarea"></textarea>
+                    <label class="label-name" for="phone">
+                        <span class="label__content">Якою ви бачите свою вивіску?</span>
+                    </label>
                 </div>
                 <div class="form-error">Необходимо заполнить пустое поле</div>
             </div>
@@ -204,6 +207,10 @@
 
     <!-- Main Section -->
     <main class="main">
+
+        <a class="phone-fix" href="tel: +380954834435">
+            <img src="./images/list/list-1.svg" alt="logo">
+        </a>
        
         <!-- Top Content -->
         <article class="top">
@@ -514,7 +521,7 @@
 
                     <div class="footer__social-item">
                         <div class="footer__social-title">
-                            Email
+                            Пошта
                         </div>
 
                         <a class="footer__social-botom" href="mailto:info@neon_by_malachite">
@@ -546,16 +553,16 @@
 
                     <div class="footer__social-item">
                         <div class="footer__social-title">
-                            Facebook
+                            Телефон
                         </div>
 
-                        <a class="footer__social-botom" href="#">
+                        <a class="footer__social-botom" href="tel: +380954834435">
                             <div class="footer__social-logo">
-                                <img src="./images/social/facebook.svg" alt="insta">
+                                <img src="./images/list/list-1.svg" alt="insta">
                             </div>
                             
                             <div class="footer__social-link">
-                                neon_by_malachite
+                                +38 095 483 44 35
                             </div>
                         </a>
                     </div>

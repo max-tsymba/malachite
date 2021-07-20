@@ -13,7 +13,7 @@ const modalOpener = () => {
             btn.addEventListener('click', () => {
 
                 overlay.style.display = 'block';
-                modal.style.display = 'block';
+                modal.classList.add('active');
                 document.body.style.overflowY = 'hidden';
                 document.body.style.marginRight = `${scroll}px`; 
             });
@@ -26,7 +26,7 @@ const modalOpener = () => {
             btn.addEventListener('click', () => {
                 
                 overlay.style.display = 'none';
-                modal.style.display = 'none';
+                modal.classList.remove('active');
                 document.body.style.overflowY = 'scroll';
                 document.body.style.marginRight = `0px`; 
             })
@@ -37,7 +37,7 @@ const modalOpener = () => {
             if(e.target === overlay) {
 
                 overlay.style.display = 'none';
-                modal.style.display = 'none';
+                modal.classList.remove('active');
                 document.body.style.overflowY = 'scroll';
                 document.body.style.marginRight = `0px`; 
             }
