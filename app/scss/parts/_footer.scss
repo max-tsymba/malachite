@@ -1,6 +1,7 @@
 /*=======================================================================================================*/
 /*Main*/
-.footer{
+.footer,
+.contact{
     position: relative;
 }
 
@@ -9,7 +10,7 @@
     height: 0px;
     width: 120px;
     box-shadow: $green-element;
-    bottom: 100px;
+    bottom: 0px;
     right: -200px;
 
     @media(max-width: 769px) {
