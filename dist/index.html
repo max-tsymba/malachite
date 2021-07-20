@@ -61,7 +61,7 @@
     <section class="modals">
 
         <!-- Contact -->
-        <form class="modal__form" action="" novalidate>
+        <form class="modal__form" id="contact-form" action="" novalidate>
 
             <div class="modal__top">
                 <div class="modal__top-title">
@@ -95,8 +95,11 @@
             </div>
 
             <div class="input-wrapper text-wrapper">
-                <div class="text-group">
-                    <textarea rows="1" class="textarea" name="message" id="textarea" placeholder="Якою ви бачите свою вивіску?"></textarea>
+                <div class="form__group text-group">
+                    <textarea rows="1" class="textarea" name="message" id="textarea"></textarea>
+                    <label class="label-name" for="phone">
+                        <span class="label__content">Якою ви бачите свою вивіску?</span>
+                    </label>
                 </div>
                 <div class="form-error">Необходимо заполнить пустое поле</div>
             </div>
@@ -108,7 +111,7 @@
         </form>
 
         <!-- Calculate -->
-        <form class="modal__form" action="" novalidate>
+        <form class="modal__form" id="calculate-form" action="" novalidate>
 
             <div class="modal__top">
                 <div class="modal__top-title">
@@ -141,8 +144,9 @@
             </div>
 
             <div class="input-wrapper">
-                <div class="form__group">
+                <div class="form__group select-group">
                     <select class="form-select" name="picture">
+                        <option selected hidden>Тип послуги</option>
                         <option value="1">Текст</option>
                         <option value="2">Рисунок</option>
                     </select>
@@ -152,7 +156,7 @@
             
             <div class="input-wrapper">
                 <div class="form__group">
-                    <input class="modal-input" type="number" name="width" autocomplete="off" required />
+                    <input class="modal-input" type="text" name="width" autocomplete="off" required />
                     <label class="label-name" for="width">
                       <span class="label__content">Ширина, мм</span>
                     </label>
@@ -162,31 +166,32 @@
 
             <div class="input-wrapper">
                 <div class="form__group">
-                    <input class="modal-input" type="number" name="height" autocomplete="off" required />
+                    <input class="modal-input" type="text" name="height" autocomplete="off" required />
                     <label class="label-name" for="height">
-                      <span class="label__content">Высота, мм</span>
+                      <span class="label__content">Висота, мм</span>
                     </label>
                 </div>
                 <div class="form-error">Необходимо заполнить пустое поле</div>
             </div>
 
             <div class="input-wrapper">
-                <div class="form__group">
+                <div class="form__group select-group" >
                     <select class="form-select" name="fonts">
+                        <option selected hidden>Шрифт</option>
                         <option value="1">fonts fonts</option>
                         <option value="2">fonts fonts</option>
                         <option value="3">fonts fonts</option>
-                        <option value="4">fonts fonts</option>
                     </select>
                 </div>
                 <div class="form-error">Необходимо заполнить пустое поле</div>
             </div>
 
             <div class="input-wrapper">
-                <div class="form__group">
+                <div class="form__group select-group">
                     <select class="form-select" name="place">
-                        <option value="1">Для приміщення</option>
-                        <option value="2">на вулицю</option>
+                        <option selected hidden>Місце</option>
+                        <option value="1">В приміщення</option>
+                        <option value="2">На вулицю</option>
                     </select>
                 </div>
                 <div class="form-error">Необходимо заполнить пустое поле</div>
@@ -202,6 +207,10 @@
 
     <!-- Main Section -->
     <main class="main">
+
+        <a class="phone-fix" href="tel: +380954834435">
+            <img src="./images/list/list-1.svg" alt="logo">
+        </a>
        
         <!-- Top Content -->
         <article class="top">
@@ -225,11 +234,11 @@
                         </div>
     
                         <div class="main__info-buttons">
-                            <button class="main__info-btn purple-btn modal-btn">
+                            <button class="main__info-btn purple-btn modal-price">
                                 Розрахувати вартість
                             </button>
     
-                            <button class="main__info-btn purple-btn modal-btn">
+                            <button class="main__info-btn purple-btn modal-booking">
                                 Замовити
                             </button>
                         </div>
@@ -300,7 +309,7 @@
                             </p>
                         </div>
 
-                        <button class="idea__desc-btn modal-btn">Розрахувати вартіть</button>
+                        <button class="idea__desc-btn modal-price">Розрахувати вартіть</button>
 
                     </div>
 
@@ -487,7 +496,7 @@
                     </ul>
 
                     <div class="booking__btn">
-                        <a class="booking__link purple-btn" href="#">Замовити</a>
+                        <a class="booking__link purple-btn modal-booking" href="#">Замовити</a>
                     </div>
                     
                 </div>
@@ -512,7 +521,7 @@
 
                     <div class="footer__social-item">
                         <div class="footer__social-title">
-                            Email
+                            Пошта
                         </div>
 
                         <a class="footer__social-botom" href="mailto:info@neon_by_malachite">
@@ -544,16 +553,16 @@
 
                     <div class="footer__social-item">
                         <div class="footer__social-title">
-                            Facebook
+                            Телефон
                         </div>
 
-                        <a class="footer__social-botom" href="#">
+                        <a class="footer__social-botom" href="tel: +380954834435">
                             <div class="footer__social-logo">
-                                <img src="./images/social/facebook.svg" alt="insta">
+                                <img src="./images/list/list-1.svg" alt="insta">
                             </div>
                             
                             <div class="footer__social-link">
-                                neon_by_malachite
+                                +38 095 483 44 35
                             </div>
                         </a>
                     </div>
