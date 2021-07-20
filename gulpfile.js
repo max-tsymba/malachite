@@ -124,7 +124,7 @@ function build() {
     return src([
         'app/css/style.min.css',
         'app/fonts/**/*',
-        'app/js/script.min.js',
+        'app/js/script.js',
     ], {
         base: 'app'
     }).pipe(dest('dist'))
@@ -132,7 +132,7 @@ function build() {
 
 function watching() {
     watch(['app/scss/**/*.scss'], styles);
-    watch(['app/js/**/*.js', '!app/js/script.min.js'], buildJs);
+    watch(['app/js/**/*.js', '!app/js/script.js'], buildJs);
     watch(['app/*.html']).on('change', browserSync.reload);
     watch(['app/groups/**/*.html']).on('change', browserSync.reload);
 }
