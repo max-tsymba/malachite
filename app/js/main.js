@@ -1,11 +1,13 @@
 import mobileMenuOpener from './modules/menu';
 import rotateText from './modules/rotate';
 import resizeTextArea from './modules/textarea';
+import modalOpener from './modules/modals';
 
 window.addEventListener('DOMContentLoaded', () => {
     mobileMenuOpener('burger', '.menu__wrapper', '.menu__list-link');
     rotateText('.text-rotate');
     resizeTextArea();
+    modalOpener();
 
     let mySlider = new Swiper('.swiper-container', {
 
