@@ -112,11 +112,15 @@ h1,h2,h3,h4,p{
     outline: none;
 }
 
-.phone-fix{
-    display: inline-block;
+.phone{
     position: fixed;
+    display: inline-block;
     right: 15px;
     bottom: 15px;
+}
+
+.phone-fix{
+    display: inline-block;
     z-index: 40;
     background: $green-gradient;
     box-shadow: 0px 0px 8px #0BDA51;
