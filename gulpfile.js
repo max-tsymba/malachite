@@ -43,6 +43,18 @@ function styles() {
         .pipe(browserSync.stream())
 }
 
+function swiperCss() {
+    return src('app/css/swiper-bundle.min.css')
+        .pipe(dest('dist/css/'))
+        .pipe(browserSync.stream())
+}
+
+function swiperJs() {
+    return src('app/js/swiper-bundle.min.js')
+        .pipe(dest('dist/js/'))
+        .pipe(browserSync.stream())
+}
+
 function buildJs() {
     return src([
         'node_modules/jquery/dist/jquery.js',
@@ -51,7 +63,7 @@ function buildJs() {
         entry: ['babel-polyfill', './app/js/main.js'],
         mode: 'development',
         output: {
-            filename: 'script.min.js'
+            filename: 'script.js'
         },
         watch: false,
         module: {
@@ -73,7 +85,7 @@ function buildJs() {
 }
 
 function images() {
-    return src('app/images/**')
+    return src('app/img/**')
         .pipe(imagemin([
             imagemin.gifsicle({interlaced: true}),
             imagemin.mozjpeg({quality: 75, progressive: true}),
@@ -85,7 +97,7 @@ function images() {
                 ]
             })
         ]))
-        .pipe(dest('dist/images'))
+        .pipe(dest('dist/img'))
 }
 
 function buildHtml() {
@@ -132,6 +144,8 @@ exports.buildhtml = buildHtml;
 exports.cleandist = cleanDist;
 exports.buildjs = buildJs;
 exports.htmlpackage = buildPackageHtml;
+exports.swipercss = swiperCss;
+exports.swiperjs = swiperJs;
 
-exports.build = series(cleanDist, images, build, buildHtml, buildPackageHtml);
+exports.build = series(cleanDist, images, build, buildHtml, buildPackageHtml, swiperCss, swiperJs);
 exports.default = parallel(styles, buildJs, browsersync, watching);

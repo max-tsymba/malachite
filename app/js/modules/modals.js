@@ -1,3 +1,4 @@
+
 const modalOpener = () => {
 
     function bindModal(getOverlayClass, getFormID, getOpenBtnClass, getCloseBtnClass) {
