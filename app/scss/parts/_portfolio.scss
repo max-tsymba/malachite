@@ -205,6 +205,10 @@
                 width: 220px;
             }
         }
+
+        @media screen and (max-width: 769px) {
+            padding-bottom: 20px;
+        }
     }
 }
 

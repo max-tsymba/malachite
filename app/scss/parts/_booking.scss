@@ -3,6 +3,13 @@
 .booking{
     position: relative;
     min-height: 100vh;
+
+    @media screen and (min-height: 800px) {
+        margin-top: -50px;
+    }
+    @media screen and (min-height: 1100px) {
+        margin-top: -200px;
+    }
 }
 
 .red-circle{
@@ -121,6 +128,10 @@
         justify-content: center;
     }
 
+    @media(max-width: 769px) {
+        margin: 100px 0 50px 0;
+    }
+
     li{
         &:nth-child(1) {
 
@@ -212,6 +223,7 @@
         padding: 60px 40px 15px 40px;
         transition: .2s all;
 
+
         @media(max-width: 426px) {
             min-height: 409px;
         }
@@ -256,12 +268,20 @@
         }
 
         @media(max-width: 1441px) {
-            max-width: 500px;
+            max-width: 430px;
             margin: 0 20px;
             margin-bottom: 40px;
         }
+        @media(max-width: 1025px) {
+            max-width: 350px;
+        }
+        @media(max-width: 850px) {
+            max-width: 300px;
+            padding: 60px 10px 15px 10px;
+        }
         @media screen and (max-width: 769px) {
             min-width: 250px;
+            max-width: 400px;
             width: 80%;
         }
         @media(max-width: 426px) {
