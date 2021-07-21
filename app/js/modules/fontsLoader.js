@@ -2,7 +2,6 @@ const fontsLoader = () => {
 
     let select = document.getElementsByName('fonts');
     let getFontsArray = [];
-    let newFontFace = [];
 
     select.forEach(option => {
         for(let i = 1; i < option.length; i++) {
@@ -19,15 +18,10 @@ const fontsLoader = () => {
         }
     })
 
-
-    for(let i = 0; i < getFontsArray.length; i++) {
-        newFontFace.push(new FontFace(getFontsArray[i], `url(../fonts/OptionFonts/${getFontsArray[i]}.ttf) format("truetype")`));
-    }
-
     select.forEach(option => {
 
         for(let i = 1; i < option.length; i++) {
-            option[i].style.fontFamily = newFontFace[i-1].family;
+            option[i].style.fontFamily = option[i].textContent;
             console.log(option[i]);
         }
     })
