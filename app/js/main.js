@@ -3,6 +3,7 @@ import rotateText from './modules/rotate';
 import resizeTextArea from './modules/textarea';
 import modalOpener from './modules/modals';
 import postRequest from './modules/postRequest';
+import fontsLoader from './modules/fontsLoader';
 import IMask from 'imask';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -11,6 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
     resizeTextArea();
     modalOpener();
     postRequest();
+    fontsLoader();
 
     let mySlider = new Swiper('.swiper-container', {
 
