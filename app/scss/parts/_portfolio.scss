@@ -3,7 +3,11 @@
 .portfolio{
     position: relative;
     min-height: 100vh;
-
+    @media screen and (min-height: 800px) {
+        @media(max-height: 1400px) {
+            min-height: 80vh;
+        }
+    }
 }
 
 .portfolio__inner{
@@ -79,9 +83,18 @@
 
 .portfolio__swiper{
     position: relative;
+    margin: 20px 0;
     
     .portfolio__container{
         height: 470px;
+
+        @media(max-width: 426px) {
+            height: 400px;
+        }
+
+        @media(max-width: 376px) {
+            height: 300px;
+        }
     }
 }
 
@@ -146,6 +159,11 @@
 /*=======================================================================================================*/
 /*Content*/
 .portfolio__inner{
+    @media screen and (min-height: 800px) {
+        @media(max-height: 1400px) {
+            min-height: 80vh;
+        }
+    }
 
     .portfolio__title{
         font-family: 'Klaxons';
@@ -163,6 +181,10 @@
         @media(max-width: 426px) {
             font-size: 42px;
         }
+
+        @media(max-height: 800px) {
+            padding-bottom: 50px;
+        }
     }
 
     .portfolio__btn{
@@ -171,12 +193,12 @@
 
         .portfolio__btn-link{
             display: inline-block;
-            width: 300px;
+            width: 350px;
             text-align: center;
             color: $green-dark;
             background-color: transparent;
             border: 4px solid $green-dark;
-            font-family: 'Sansation';
+            font-family: 'Days-One';
             font-size: 36px;
             padding: 11px 5px;
             border-radius: 70px;
@@ -185,9 +207,6 @@
                 transform: scale(0.97);
             }
 
-            @media(max-width: 769px) {
-                margin-top: 100px;
-            }
             @media(min-width: 768px) {
                 &:hover{
                     background-color: $green-dark;
@@ -196,7 +215,6 @@
                 }
             }
             @media(max-width: 426px) {
-                margin-top: 70px;
                 font-size: 18px;
                 width: 220px;
             }
@@ -204,6 +222,10 @@
 
         @media screen and (max-width: 769px) {
             padding-bottom: 20px;
+        }
+
+        @media(max-height: 800px) {
+            padding-top: 50px;
         }
     }
 }
@@ -289,7 +311,7 @@
     }
 
     .portfolio__block-price{
-        font-family: 'Sansation';
+        font-family: 'Days-One';
         font-size: 18px;
         
         @media(max-width: 376px) {

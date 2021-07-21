@@ -52,7 +52,7 @@
 
         .modal__top-title{
             color: $green;
-            font-family: 'Sansation';
+            font-family: 'Days-One';
             font-size: 24px;
             text-transform: uppercase;
             @media(max-width: 769px) {
@@ -86,7 +86,7 @@
     }
 
     .form-btn{
-        font-family: 'Sansation';
+        font-family: 'Days-One';
         font-size: 24px;
         letter-spacing: 0.05em;
         color: $green;
@@ -144,7 +144,7 @@
             background-color: transparent;
             font-size: 20px;
             padding: 0;
-            font-family: 'Sansation';
+            font-family: 'Days-One';
             color: #E1F4F3;
             opacity: .5;
             font-weight: 300;
@@ -205,7 +205,7 @@
     }
 
     .label-name{
-        font-family: 'Sansation';
+        font-family: 'Days-One';
         font-size: 20px;
         font-weight: 300;
         color: #E1F4F3;
@@ -282,7 +282,7 @@
     .form-error{
         position: absolute;
         bottom: 8px;
-        font-family: 'Sansation';
+        font-family: 'Days-One';
         font-size: 10px;
         color: rgb(235, 86, 86);
         display: none;
@@ -333,7 +333,7 @@
 
 .textarea{
     margin-top: 10px;
-    font-family: 'Sansation';
+    font-family: 'Days-One';
     width: 100%;
     border: none;
     overflow: hidden;
