@@ -5,11 +5,14 @@
     margin-top: -132px;
     padding-top: 120px;
     min-height: 100vh;
+    padding-bottom: 120px;
+    display: flex;
+    align-items: center;
 
-    @media(max-height: 1200px) {
+    @media(max-height: 1025px) {
         @include toHeigh(padding-top, 70, 1000px);
+        @include toHeigh(padding-bottom, 70, 1000px);
     }
-
 }
 
 .purple-circle{
@@ -34,10 +37,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 100px;
+    margin: 20px 0px;
+    padding-top: 20px;
+
+    @media(min-width: 1440px) {
+        min-width: 1370px;
+    }
 
     .main__info{
         max-width: 686px;
+
+        @media(max-width: 1440px) {
+            margin-right: 20px;
+        }
+    
 
         .main__info-title{
             font-family: 'Days-One';
@@ -48,7 +61,7 @@
 
             span{
                 color: $purple;
-                text-shadow: 0px 0px 2px #AC3E94;
+                text-shadow: 0px 0px 4px #AC3E94;
             }
 
             @media(max-width: 1441px) {
@@ -110,6 +123,7 @@
                     padding-left: 35px;
                     padding-right: 35px;
                     transition: .2s all;
+                    filter: drop-shadow(0px 0px 10px $purple-btn);
 
                     @media(min-width: 768px) {
                         &:hover{
@@ -140,9 +154,10 @@
                 }
             }
 
-            @media(max-width: 1025px) {
+
+            @media(max-width: 426px) {
+                max-width: 300px;
                 flex-direction: column;
-                max-width: 320px;
                 margin: 0 auto;
 
                 .main__info-btn {
@@ -161,12 +176,12 @@
         @media screen and (max-width: 1025px) {
             max-width: 700px;
             padding: 70px 0 10px 0;
+            margin-right: 0;
         }
 
         @media screen and (max-width: 769px) {
             padding: 0;
             max-width: 586px;
-            text-align: center;
         }
         @media(max-width: 376px) {
             text-align: left;
@@ -198,6 +213,8 @@
     }
 
     @media screen and (max-width: 1025px) {
+        margin: 0;
+        padding-top: 0;
         margin-top: 150px;
     }
     @media screen and (max-width: 767px) {
@@ -210,24 +227,17 @@
 /*=======================================================================================================*/
 /*Arrow*/
 .main__arrow{
-    position: relative;
-    margin-top: 120px;
+    position: absolute;
+    left: 0;
+    right: 0;
     text-align: center;
-    bottom: 100px;
+    bottom: 50px;
     transition: .2s all;
+
     &:active{
         img{
             transform: scale(0.97);
         }
-    }
-
-    @media(min-height: 860px) {
-        position: absolute;
-        bottom: 30px;
-        left: 0; 
-        right: 0; 
-        margin-left: auto; 
-        margin-right: auto;
     }
 
     @media(max-width: 426px) {

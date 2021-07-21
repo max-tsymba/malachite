@@ -3,11 +3,8 @@
 .portfolio{
     position: relative;
     min-height: 100vh;
-    @media(max-width: 769px) {
-        padding-top: 100px;
-    }
 
-    @media only screen {
+    @media screen and (max-width: 769px) {
         padding-top: 100px;
     }
 
@@ -72,11 +69,11 @@
 }
 
 .portfolio__swiper{
-    margin-top: 170px;
+    margin-top: 100px;
     position: relative;
 
     @media(max-height: 1100px) {
-        @include toHeigh(margin-top, 200, 900px);
+        @include toHeigh(margin-top, 150, 900px);
     }
     @media(max-width: 769px) {
         margin-top: 100px;
@@ -177,7 +174,8 @@
             color: $green-dark;
             background-color: transparent;
             border: 4px solid $green-dark;
-            filter: drop-shadow(0px 0px 8px $green);
+            filter: drop-shadow(0px 0px 1px $green);
+            box-shadow: 0px 0px 5px 0px $green;
             font-family: 'Sansation';
             font-size: 36px;
             padding: 11px 5px;
@@ -211,8 +209,8 @@
 /*=======================================================================================================*/
 /*Content*/
 .portfolio__block{
-    padding: 20px 74px;
     position: absolute;
+    width: 100%;
     top: 100%;
     height: 100%;
     background: rgba(11, 218, 81, 0.1);
@@ -221,20 +219,17 @@
     border-top-right-radius: 30px;
     transition: .6s all;
 
-    @media(max-width: 1441px) {
-        padding: 20px 20px;
-    }
-
-    @media(max-width: 376px) {
-        padding: 10px 5px;
+    @media screen and (max-width: 769px) {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
     }
 
     .portfolio__block-title{
         font-family: 'Montserrat';
+        padding: 20px 74px;
         font-size: 18px;
         color: $white;
         text-align: center;
-        padding-bottom: 20px;
         
         @media(max-width: 1441px) {
             font-size: 16px;
@@ -250,6 +245,14 @@
 
         @media(max-width: 376px) {
             font-size: 10px;
+        }
+
+        @media(max-width: 1441px) {
+            padding: 20px 20px;
+        }
+    
+        @media(max-width: 376px) {
+            padding: 10px 5px;
         }
     }
 

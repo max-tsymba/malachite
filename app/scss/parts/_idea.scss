@@ -3,6 +3,10 @@
 .idea{
     position: relative;
     min-height: 100vh;
+
+    @media(max-width: 1025px) {
+        margin-bottom: 50px;
+    }
 }
 .idea__inner{
     min-height: 100vh;
@@ -16,15 +20,11 @@
 
     @media screen and (max-width: 1025px) {
         align-items: center;
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: space-around;
         padding-top: 0px;
-        margin-top: -20px;
+        margin-top: 50px;
         padding-bottom: 50px;
-    }
-
-    @media(max-width: 1025px) {
-        padding-top: 50px;
     }
 
 }
@@ -116,7 +116,7 @@
     .idea__design-img{
 
         @media(max-width: 769px) {
-            padding-bottom: 100px;
+            padding-bottom: 50px;
         }
     }
 
@@ -131,6 +131,7 @@
 /*Text Content*/
 .idea__info{
     max-width: 538px;
+
 
     .idea__info-title{
         font-family: 'Days-One';

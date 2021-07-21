@@ -77,18 +77,19 @@
     text-align: center;
     margin-top: 20px;
     margin-bottom: 108px;
+    transition: .2s all;
+
 
     .booking__link{
         background-color: $purple-btn;
         width: 252px;
         display: inline-block;
         text-align: center;
-        
+        filter: drop-shadow(0px 0px 10px $purple-btn);
+
         @media(min-width: 769px) {
             &:hover{
-                background-color: transparent;
-                filter: drop-shadow(0px 0px 8px $purple-btn);
-                box-shadow: 0px 0px 8px $purple-btn;
+                filter: drop-shadow(0px 0px 15px $purple-btn);
             }
         }
         @media(max-width: 1441px) {
@@ -249,6 +250,10 @@
             max-width: 500px;
             margin: 0 20px;
             margin-bottom: 40px;
+        }
+        @media screen and (max-width: 769px) {
+            min-width: 250px;
+            width: 80%;
         }
         @media(max-width: 426px) {
             padding: 60px 10px 15px 10px;

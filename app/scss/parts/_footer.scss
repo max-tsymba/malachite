@@ -81,6 +81,7 @@
         font-size: 10px;
         a{
             color: #9C864B;
+            text-transform: uppercase;
         }
     }
 }
@@ -151,6 +152,10 @@
                         color: $white;
                     }
                 }
+                @media(max-width: 376px) {
+                    font-size: 14px;
+                    margin-left: 10px;
+                }
             }
 
             @media(max-width: 1024px) {
@@ -168,9 +173,6 @@
     @media(max-width: 376px) {
         .footer__social-title {
             display: none;
-        }
-        .footer__social-botom{
-            flex-direction: column;
         }
         padding-bottom: 100px;
     }
