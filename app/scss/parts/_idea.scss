@@ -114,9 +114,9 @@
     margin-bottom: 50px;
 
     .idea__design-img{
-
-        @media(max-width: 769px) {
-            padding-bottom: 50px;
+        
+        @media screen and (min-height: 1000px) {
+            margin-bottom: -200px;
         }
     }
 
@@ -275,6 +275,7 @@
                 background-color: $white;
                 color: $black;
                 filter: drop-shadow(0px 0px 1px $black);
+                box-shadow: 0px 0px 7px $white;
             }
         }
     }

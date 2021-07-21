@@ -6,15 +6,8 @@
     margin-top: 40px;
     z-index: 5;
 
-    @media(max-width: 1441px) {
-        padding-right: 35px;
-        padding-left: 35px;
-    }
-
     @media(max-width: 1025px) {
         height: 90px;
-        padding-right: 25px;
-        padding-left: 25px;
     }
     @media(max-width: 769px) {
         margin-top: 15px;
@@ -156,6 +149,7 @@
 
     @media(max-width: 769px) {
         display: block;
+        right: 15px;
     }
 
     @media(max-width: 426px) {
@@ -169,7 +163,7 @@
 .burger-line{
     width: 35px;
     height: 3px;
-    background: $grey;
+    background: $white;
     position: absolute;
     transition: .3s all;
     top: 50%;
@@ -187,13 +181,13 @@
 
     &::after{
         top: -8px;
-        background: $grey;
+        background: $white;
         width: 35px;
     }
 
     &::before{
         top: 8px;
-        background: $grey;
+        background: $white;
         width: 35px;
     }
 
