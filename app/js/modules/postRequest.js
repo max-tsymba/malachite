@@ -16,8 +16,6 @@ const postRequest = () => {
 
         form.addEventListener('submit', formSend);
 
-        console.log(inputs);
-
         async function formSend(e) {
             e.preventDefault();
             submitBtn.disabled = true;
