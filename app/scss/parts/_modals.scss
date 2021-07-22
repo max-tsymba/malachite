@@ -7,9 +7,19 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    opacity: 0;
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(6px);
     display: none;
+
+    @media(max-height: 500px) {
+        overflow-y: scroll;
+    }
+}
+
+.modals.active{
+    display: block;
+    animation: opacityPopup .4s linear forwards;
 }
 /*=======================================================================================================*/
 
@@ -36,6 +46,10 @@
     @media(max-width: 400px) {
         min-height: 300px;
         width: 250px;
+    }
+
+    @media(max-height: 500px) {
+        top: 80%;
     }
     
 
@@ -128,6 +142,10 @@
         @media(max-width: 400px) {
             padding: 10px 5px;
         }
+
+        @media(min-height: 769px) {
+            margin-top: 20px;
+        }
     }
 
     .select-group{
@@ -158,11 +176,10 @@
             }
 
             @media(max-width: 769px) {
-                font-size: 14px;
+                font-size: 20px;
             }
             @media(max-width: 400px) {
-                height: 35px;
-                font-size: 12px;
+                font-size: 18px;
             }
 
             option{
@@ -172,11 +189,46 @@
         }
 
     }
+
+    @media(max-height: 770px) {
+        .form__btn-group{
+            padding: 20px 10px;
+
+            .form-btn{
+                width: 250px;
+                font-size: 18px;
+                padding: 10px 5px;
+            }
+        }
+
+    }
+
+    @media(max-width: 426px) {
+        .form__btn-group{
+            padding: 20px 10px;
+
+            .form-btn{
+                width: 180px;
+                font-size: 18px;
+                padding: 10px 5px;
+            }
+        }
+
+    }
 }
 
 .modal__form.active{
-    opacity: 1;
     display: block;
+    animation: opacityPopup .4s linear forwards;
+}
+
+@keyframes opacityPopup {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 /*=======================================================================================================*/
 
@@ -202,6 +254,22 @@
         height: 50px;
     }
 
+    @media(max-height: 770px) {
+        height: 60px;
+    }
+
+    @media(max-height: 650px) {
+        height: 50px;
+    }
+
+    @media(max-height: 570px) {
+        height: 40px;
+    }
+
+    @media(min-height: 769px) {
+        height: 70px;
+    }
+
     .form-error{
         position: absolute;
         bottom: 0px;
@@ -211,23 +279,26 @@
         font-size: 10px;
         color: rgb(235, 86, 86);
         display: none;
-    }
-}
 
-._error{
+        @media(max-height: 770px) {
+            bottom: 10px;
+        }
 
-    .label__content{
-        color: rgb(235, 86, 86);
-    }
-    
-    .label-name{
-        border-bottom: 1px solid rgba(235, 86, 86, 0.2);
+        @media(max-height: 650px) {
+            bottom: 5px;
+        }
 
-        &::after{
-            border-bottom: 2px solid rgb(235, 86, 86);
+        @media(max-height: 570px) {
+            bottom: -1px;
+            font-size: 9px;
+        }
+
+        @media(min-height: 769px) {
+            bottom: 10px;
         }
     }
 }
+
 
 .text-wrapper{
     margin-top: 10px;
@@ -238,10 +309,12 @@
 }
 
 .textarea{
-    margin-top: 10px;
-    font-family: 'Days-One';
+    margin-top: 20px;
+    padding-right: 5px;
+    font-family: 'Sansation';
     width: 100%;
     max-height: 120px;
+    font-weight: 300;
     border: none;
     overflow: hidden;
     padding: 0;
@@ -255,8 +328,8 @@
     transition: border-color 0.2s;
 
     @media(max-width: 400px) {
-        height: 18px;
-        font-size: 12px;
+        height: 34px;
+        font-size: 16px;
     }
 
 }
@@ -264,13 +337,16 @@
 textarea:focus{
     ~ .label-name{
         position: absolute;
-        top: 10px;
+        top: 7px;
         display: block;
-        transition: .2s;
+        transition: .2s all; 
         font-size: 14px;
         color: $green;
+        @media(max-width: 400px) {
+           top: 0px;
+           font-size: 14px;
+        }
     }
-    padding-top: 6px;
     border-width: 3px;
     border-color: $green;
 }
@@ -279,13 +355,16 @@ textarea:focus{
     textarea{
             ~ .label-name{
                 position: absolute;
-                top: 10px;
+                top: 7px;
                 display: block;
-                transition: .2s;
+                transition: .2s all;
                 font-size: 14px;
                 color: $grey;
+                @media(max-width: 400px) {
+                    top: 0px;
+                    font-size: 14px;
+                }
             }
-            padding-top: 6px;
             border-width: 3px;
             border-color: $grey;
         }
@@ -310,6 +389,15 @@ textarea:focus{
         background: transparent;
         transition: border-color 0.2s;
         
+        @media(max-height: 770px ) {
+            font-size: 18px;
+            padding: 5px 0;
+        }
+
+        @media(max-height: 650px) {
+            font-size: 14px;
+        }
+        
     }
 
     .label-name{
@@ -322,6 +410,9 @@ textarea:focus{
         font-size: 20px;
         color: $grey;
         pointer-events: none;
+        @media(max-height: 570px) {
+            font-size: 14px;
+        }
     }
 
     .modal-input:focus{
@@ -332,8 +423,10 @@ textarea:focus{
             transition: .2s;
             font-size: 14px;
             color: $green;
+            @media(max-height: 650px) {
+                bottom: 22px;
+            }
         }
-        padding-top: 6px;
         border-width: 3px;
         border-color: $green;
     }
@@ -346,20 +439,46 @@ textarea:focus{
             transition: .2s;
             font-size: 14px;
             color: $grey;
+            @media(max-height: 650px) {
+                bottom: 22px;
+            }
         }
-        padding-top: 6px;
         border-width: 3px;
         border-color: $grey;
+    }
+
+    @media(max-height: 770px ) {
+        padding: 0;
     }
 }
 
 .text-group{
     position: relative;
     .label-name{
-        border: none;
-        top: 30px;
+        border: none;   
         color: $grey;
         transition: .2s all;
+    }
+}
+
+.input-wrapper._error{
+
+    .form__group {
+        .label__content{
+            color: rgb(235, 86, 86);
+        }
+    }
+
+    input,
+    input:focus{
+        border-color: rgb(235, 86, 86);
+    }
+}
+
+
+.form__group{
+    @media(min-height: 770px) {
+        padding: 0;
     }
 }
 /*=======================================================================================================*/

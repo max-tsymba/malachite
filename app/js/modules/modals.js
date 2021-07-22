@@ -8,6 +8,7 @@ const modalOpener = () => {
             openBtn = document.querySelectorAll(getOpenBtnClass),
             closeBtn = document.querySelectorAll(getCloseBtnClass),
             inputs = document.querySelectorAll('._req'),
+            wrappers = document.querySelectorAll('.input-wrapper'),
             labels = document.querySelectorAll('.form-error');
 
         const scroll = calcScroll();
@@ -15,7 +16,7 @@ const modalOpener = () => {
         openBtn.forEach(btn => {
             btn.addEventListener('click', () => {
 
-                overlay.style.display = 'block';
+                overlay.classList.add('active');
                 modal.classList.add('active');
                 document.body.style.overflowY = 'hidden';
                 document.body.style.marginRight = `${scroll}px`; 
@@ -26,11 +27,12 @@ const modalOpener = () => {
 
             btn.addEventListener('click', () => {
                 
-                overlay.style.display = 'none';
+                overlay.classList.remove('active');
                 modal.classList.remove('active');
                 document.body.style.overflowY = 'scroll';
                 document.body.style.marginRight = `0px`; 
-                clearErrors(labels, inputs);
+                clearErrors(labels, wrappers);
+                Reset(modal);
             })
         });
 
@@ -38,11 +40,12 @@ const modalOpener = () => {
 
             if(e.target === overlay) {
 
-                overlay.style.display = 'none';
+                overlay.classList.remove('active');
                 modal.classList.remove('active');
                 document.body.style.overflowY = 'scroll';
                 document.body.style.marginRight = `0px`; 
-                clearErrors(labels, inputs);
+                clearErrors(labels, wrappers);
+                Reset(modal);
             }
         })
     };
@@ -75,8 +78,12 @@ function clearErrors(labelError, inputsError) {
     });
 
     inputsError.forEach(item => {
-        item.classList.remove('._error');
-});
+        item.classList.remove('_error');
+    });
+}
+
+function Reset(form) {
+    form.reset();
 }
 
 export default modalOpener;

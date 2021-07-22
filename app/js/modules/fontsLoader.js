@@ -1,4 +1,4 @@
-const fontsLoader = () => {
+const fontsLoader = (url) => {
 
     let select = document.getElementsByName('fonts');
     let getFontsArray = [];
@@ -11,7 +11,7 @@ const fontsLoader = () => {
             newStyle.appendChild(document.createTextNode("\
             @font-face {\
                 font-family: " + option[i].textContent + ";\
-                src: url('../fonts/OptionFonts/" + option[i].textContent + ".ttf') format('truetype');\
+                src: url('../" + url + "/" + option[i].textContent + ".ttf') format('truetype');\
             }\
             "));
             document.head.appendChild(newStyle);

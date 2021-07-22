@@ -57,6 +57,14 @@ body{
     }
 }
 
+button {
+    opacity: 1;
+}
+
+button:disabled{
+    opacity: .5;
+}
+
 ul{
     margin: 0;
     padding: 0;

@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
     resizeTextArea();
     modalOpener();
     postRequest();
-    fontsLoader();
+    fontsLoader(config.fonts);
 
     let mySlider = new Swiper('.swiper-container', {
 

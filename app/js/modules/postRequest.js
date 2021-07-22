@@ -5,11 +5,12 @@ if(document.querySelector('meta[name="csrf-token"]') !== null) {
 
 const postRequest = () => {
 
-    function bindRequest(getFormID, getErrorLabelsClass, getInputsSelector) {
+    function bindRequest(getFormID, getErrorLabelsClass, getInputsSelector, getInputWrapper) {
 
         const form = document.getElementById(getFormID),
             labels = document.querySelectorAll(getErrorLabelsClass),
-            inputs = document.querySelectorAll(getInputsSelector);
+            inputs = document.querySelectorAll(getInputsSelector),
+            wrapper = document.querySelectorAll(getInputWrapper);
 
         const submitBtn = form.lastElementChild.children[0];
         const url = form.action;
@@ -20,11 +21,7 @@ const postRequest = () => {
             e.preventDefault();
             submitBtn.disabled = true;
 
-            clearErrors(labels);
-
-            labels.forEach((label) => {
-                label.style.display = 'block';
-            })
+            clearErrors(labels, wrapper);
 
             let formData = new FormData(form); 
             form.classList.add('_sending');
@@ -45,8 +42,10 @@ const postRequest = () => {
                 form.classList.remove('_sending');
                 form.classList.add('active');
                 Reset(form);
-                submitBtn.disabled = false;
-                location.reload();
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    location.reload();
+                }, 2000);
             } else {   
 
                 let result = await response.json();
@@ -56,7 +55,7 @@ const postRequest = () => {
                     for(let index = 0; index < inputs.length; index++) {
 
                         if(inputs[index].name === error) {
-                            inputs[index].classList.add('_error');
+                            wrapper[index].classList.add('_error');
                             labels[index].textContent = result.errors[error];
                             labels[index].style.display = 'block';
                         }
@@ -69,14 +68,18 @@ const postRequest = () => {
         }
     };
 
-    bindRequest('contact-form', '#contact-form .form-error', '#contact-form ._req');
-    bindRequest('calculate-form', '#calculate-form .form-error', '#calculate-form ._req');
+    bindRequest('contact-form', '#contact-form .form-error', '#contact-form ._req', '#contact-form .input-wrapper');
+    bindRequest('calculate-form', '#calculate-form .form-error', '#calculate-form ._req', '#calculate-form .input-wrapper');
 };
 
-function clearErrors(labelError) {
+function clearErrors(labelError, inputsError) {
 
     labelError.forEach(item => {
             item.style.display = 'none';
+    });
+
+    inputsError.forEach(item => {
+        item.classList.remove('._error');
     });
 }
 
