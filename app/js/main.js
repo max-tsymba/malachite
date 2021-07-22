@@ -64,4 +64,13 @@ window.addEventListener('DOMContentLoaded', () => {
         mySlider.autoplay.stop();
     })
 
+    let topButton = document.querySelector(".phone");
+    window.addEventListener("scroll", function(){
+    if(window.pageYOffset > 150){
+      topButton.classList.add("shown");
+    }else{
+        topButton.classList.remove("shown");
+    }
+  });
+
 });

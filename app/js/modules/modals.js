@@ -27,12 +27,19 @@ const modalOpener = () => {
 
             btn.addEventListener('click', () => {
                 
-                overlay.classList.remove('active');
-                modal.classList.remove('active');
+                overlay.classList.add('toback');
+                modal.classList.add('toback');
                 document.body.style.overflowY = 'scroll';
                 document.body.style.marginRight = `0px`; 
                 clearErrors(labels, wrappers);
                 Reset(modal);
+
+                setTimeout(() => {
+                    overlay.classList.remove('active');
+                    overlay.classList.remove('toback');
+                    modal.classList.remove('active');
+                    modal.classList.remove('toback');
+                }, 200);
             })
         });
 
@@ -40,12 +47,19 @@ const modalOpener = () => {
 
             if(e.target === overlay) {
 
-                overlay.classList.remove('active');
-                modal.classList.remove('active');
+                overlay.classList.add('toback');
+                modal.classList.add('toback');
                 document.body.style.overflowY = 'scroll';
                 document.body.style.marginRight = `0px`; 
                 clearErrors(labels, wrappers);
                 Reset(modal);
+
+                setTimeout(() => {
+                    overlay.classList.remove('active');
+                    overlay.classList.remove('toback');
+                    modal.classList.remove('active');
+                    modal.classList.remove('toback');
+                }, 200);
             }
         })
     };

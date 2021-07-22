@@ -165,6 +165,9 @@ h1,h2,h3,h4,p{
     right: 40px;
     bottom: 40px;
     z-index: 40;
+    opacity: 0;
+    display: none;
+    transition: .4s all;
 
     @media(max-width: 1441px) {
         right: 30px;
@@ -173,6 +176,37 @@ h1,h2,h3,h4,p{
 
     @media(max-width: 426px) {
         right: 15px;
+    }
+}
+
+.phone.shown{
+    display: block;
+    animation: opacityBtn .2s linear forwards;
+}
+
+.phone{
+    animation: toBack .2s linear forwards;
+}
+
+@keyframes toBack{
+    0%{
+        opacity: 1;
+        display: block;
+    }
+    100%{
+        opacity: 0;
+        display: none;  
+    }
+}
+
+@keyframes opacityBtn {
+    0%{
+        opacity: 0;
+        display: block;
+    }
+    100%{
+        opacity: 1;
+        display: block;
     }
 }
 

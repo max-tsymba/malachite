@@ -7,10 +7,10 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    opacity: 0;
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(6px);
     display: none;
+    animation: toBack .2s linear forwards;
 
     @media(max-height: 500px) {
         overflow-y: scroll;
@@ -19,8 +19,9 @@
 
 .modals.active{
     display: block;
-    animation: opacityPopup .4s linear forwards;
+    animation: opacityPopup .2s linear forwards;
 }
+
 /*=======================================================================================================*/
 
 /*=======================================================================================================*/
@@ -35,8 +36,9 @@
     transform: translate(-50%, -50%);
     margin: 0 auto;
     opacity: 0;
-    transition: 2s all;
     display: none;
+    transition: 2s all;
+    
 
     @media(max-width: 769px) {
         min-height: 400px;
@@ -59,9 +61,14 @@
         padding: 0px 27px;
         height: 60px;
         align-items: center;
+        margin-bottom: 40px;
 
         @media(max-width: 400px) {
             padding: 0 10px;
+        }
+
+        @media(max-width: 769px) {
+            margin-bottom: 10px;
         }
 
         .modal__top-title{
@@ -135,10 +142,6 @@
         text-align: center;
         padding: 40px 10px;
 
-        @media(max-width: 769px) {
-            padding: 20px 10px;
-        }
-
         @media(max-width: 400px) {
             padding: 10px 5px;
         }
@@ -146,6 +149,8 @@
         @media(min-height: 769px) {
             margin-top: 20px;
         }
+
+        
     }
 
     .select-group{
@@ -161,10 +166,10 @@
             border: none;
             outline: none;
             background-color: transparent;
-            font-size: 20px;
+            font-size: 24px;
             padding: 0;
             font-family: 'Sansation';
-            color: $grey;
+            color: rgba(225, 244, 243, 0.5);
             opacity: 1;
             font-weight: 300;
             cursor: pointer;
@@ -180,6 +185,10 @@
             }
             @media(max-width: 400px) {
                 font-size: 18px;
+            }
+
+            @media(max-height: 570px ) {
+                font-size: 14px;
             }
 
             option{
@@ -215,19 +224,51 @@
         }
 
     }
+
+    @media(max-width: 769px) {
+        .form__btn-group{
+            padding: 10px 5px;
+        }
+    }
+
 }
 
 .modal__form.active{
     display: block;
-    animation: opacityPopup .4s linear forwards;
+    animation: opacityPopup .2s linear forwards;
+}
+
+.modal{
+    animation: toBack .2s linear forwards;
+}
+
+.modal__form.active.toback{
+    animation: toBack .2s linear forwards;
+}
+
+.modals.active.toback{
+    animation: toBack .2s linear forwards;
+}
+
+@keyframes toBack{
+    0%{
+        opacity: 1;
+        display: block;
+    }
+    100%{
+        opacity: 0;
+        display: none;  
+    }
 }
 
 @keyframes opacityPopup {
     0%{
         opacity: 0;
+        display: block
     }
     100%{
         opacity: 1;
+        display: block;
     }
 }
 /*=======================================================================================================*/
@@ -301,16 +342,27 @@
 
 
 .text-wrapper{
-    margin-top: 10px;
+    margin-top: 20px;
     height: 160px;
     .form-error{
         top: 62px;
     }
+
+    @media(max-height: 580px) and (min-width: 450px) {
+        .form-error{
+            top: 52px;
+        }
+    }
+
+    @media(min-height: 580px) {
+        .form-error{
+            top: 36px;
+        }
+    }
 }
 
 .textarea{
-    margin-top: 20px;
-    padding-right: 5px;
+    padding-top: 20px;
     font-family: 'Sansation';
     width: 100%;
     max-height: 120px;
@@ -321,30 +373,37 @@
     outline: none;
     background-color: transparent;
     color: $white;
-    font-size: 16px;
+    font-size: 20px;
     padding: 5px 0;
     resize: none;
-    border-bottom: 2px solid $grey;
+    border-bottom: 2px solid rgba(225, 244, 243, 0.5);;
     transition: border-color 0.2s;
 
     @media(max-width: 400px) {
         height: 34px;
-        font-size: 16px;
+        font-size: 18px;
     }
 
+    @media(max-height: 650px) {
+        margin-top: 20px;
+        font-size: 14px;
+    }
 }
 
 textarea:focus{
     ~ .label-name{
         position: absolute;
-        top: 7px;
+        top: -15px;
         display: block;
         transition: .2s all; 
         font-size: 14px;
         color: $green;
         @media(max-width: 400px) {
-           top: 0px;
+           top: -22px;
            font-size: 14px;
+        }
+        @media(max-height: 580px) {
+           top: 5px;
         }
     }
     border-width: 3px;
@@ -355,18 +414,19 @@ textarea:focus{
     textarea{
             ~ .label-name{
                 position: absolute;
-                top: 7px;
+                top: -15px;
                 display: block;
                 transition: .2s all;
                 font-size: 14px;
-                color: $grey;
                 @media(max-width: 400px) {
-                    top: 0px;
+                    top: -22px;
                     font-size: 14px;
                 }
+                @media(max-height: 580px) {
+                    top: 5px;
+                 }
             }
             border-width: 3px;
-            border-color: $grey;
         }
 }
 
@@ -382,7 +442,7 @@ textarea:focus{
         width: 100%;
         font-size: 20px;
         border: none;
-        border-bottom: 2px solid $grey;
+        border-bottom: 2px solid rgba(225, 244, 243, 0.5);
         outline: 0;
         color: $white;
         padding: 7px 0;
@@ -407,11 +467,14 @@ textarea:focus{
         bottom: 5px;
         display: block;
         transition: .2s;
-        font-size: 20px;
-        color: $grey;
+        font-size: 24px;
+        color: rgba(225, 244, 243, 0.5);;
         pointer-events: none;
         @media(max-height: 570px) {
             font-size: 14px;
+        }
+        @media(max-width: 427px) {
+            font-size: 18px;
         }
     }
 
@@ -424,7 +487,7 @@ textarea:focus{
             font-size: 14px;
             color: $green;
             @media(max-height: 650px) {
-                bottom: 22px;
+                bottom: 26px;
             }
         }
         border-width: 3px;
@@ -438,13 +501,11 @@ textarea:focus{
             display: block;
             transition: .2s;
             font-size: 14px;
-            color: $grey;
             @media(max-height: 650px) {
-                bottom: 22px;
+                bottom: 26px;
             }
         }
         border-width: 3px;
-        border-color: $grey;
     }
 
     @media(max-height: 770px ) {
@@ -455,22 +516,17 @@ textarea:focus{
 .text-group{
     position: relative;
     .label-name{
+        bottom: 7px;
         border: none;   
-        color: $grey;
+        color: rgba(225, 244, 243, 0.5);;
         transition: .2s all;
     }
 }
 
 .input-wrapper._error{
 
-    .form__group {
-        .label__content{
-            color: rgb(235, 86, 86);
-        }
-    }
-
     input,
-    input:focus{
+    textarea{
         border-color: rgb(235, 86, 86);
     }
 }
@@ -479,6 +535,10 @@ textarea:focus{
 .form__group{
     @media(min-height: 770px) {
         padding: 0;
+    }
+
+    @media(max-height: 570px) {
+        margin-top: 15px;
     }
 }
 /*=======================================================================================================*/
