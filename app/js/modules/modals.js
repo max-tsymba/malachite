@@ -6,7 +6,9 @@ const modalOpener = () => {
         const overlay = document.querySelector(getOverlayClass),
             modal = document.getElementById(getFormID),
             openBtn = document.querySelectorAll(getOpenBtnClass),
-            closeBtn = document.querySelectorAll(getCloseBtnClass);
+            closeBtn = document.querySelectorAll(getCloseBtnClass),
+            inputs = document.querySelectorAll('._req'),
+            labels = document.querySelectorAll('.form-error');
 
         const scroll = calcScroll();
 
@@ -20,8 +22,6 @@ const modalOpener = () => {
             });
         })
 
-        console.log(closeBtn);
-
         closeBtn.forEach(btn => {
 
             btn.addEventListener('click', () => {
@@ -30,6 +30,7 @@ const modalOpener = () => {
                 modal.classList.remove('active');
                 document.body.style.overflowY = 'scroll';
                 document.body.style.marginRight = `0px`; 
+                clearErrors(labels, inputs);
             })
         });
 
@@ -41,6 +42,7 @@ const modalOpener = () => {
                 modal.classList.remove('active');
                 document.body.style.overflowY = 'scroll';
                 document.body.style.marginRight = `0px`; 
+                clearErrors(labels, inputs);
             }
         })
     };
@@ -64,6 +66,17 @@ function calcScroll() {
     div.remove();
 
     return scrollWidth;
+}
+
+function clearErrors(labelError, inputsError) {
+
+    labelError.forEach(item => {
+            item.style.display = 'none';
+    });
+
+    inputsError.forEach(item => {
+        item.classList.remove('._error');
+});
 }
 
 export default modalOpener;

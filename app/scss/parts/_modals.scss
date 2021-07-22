@@ -52,7 +52,7 @@
 
         .modal__top-title{
             color: $green;
-            font-family: 'Days-One';
+            font-family: 'Sansation';
             font-size: 24px;
             text-transform: uppercase;
             @media(max-width: 769px) {
@@ -86,7 +86,7 @@
     }
 
     .form-btn{
-        font-family: 'Days-One';
+        font-family: 'Sansation';
         font-size: 24px;
         letter-spacing: 0.05em;
         color: $green;
@@ -138,18 +138,25 @@
 
         select{
             width: 100%;
-            height: 40px;
+            -webkit-appearance: none;
+            height: 30px;
             border: none;
             outline: none;
             background-color: transparent;
             font-size: 20px;
             padding: 0;
-            font-family: 'Days-One';
-            color: #E1F4F3;
-            opacity: .5;
+            font-family: 'Sansation';
+            color: $grey;
+            opacity: 1;
             font-weight: 300;
             cursor: pointer;
-            border-bottom: 1px solid rgba($white, 0.2);
+            border-bottom: 2px solid $grey;
+            
+            &:focus{
+                border-width: 3px;
+                border-color: $green;
+            }
+
             @media(max-width: 769px) {
                 font-size: 14px;
             }
@@ -175,91 +182,7 @@
 
 /*=======================================================================================================*/
 /*Inputs*/
-.form__group{
-    width: 100%;
-    position: relative;
-    height: 45px;
-    overflow: hidden;
-    margin-bottom: 30px;
 
-    @media(max-width: 400px) {
-        margin-bottom: 5px;
-        height: 35px;
-    }
-
-    .modal-input{
-        margin: 0;
-        padding: 0px 5px;
-        border: none;
-        width: 100%;
-        height: 40px;
-        background-color: transparent;
-        padding-top: 20px;
-        color: $white;
-        font-size: 16px;
-        outline: none;
-        @media(max-width: 400px) {
-            font-size: 12px;
-            padding-bottom: 10px;
-        }
-    }
-
-    .label-name{
-        font-family: 'Days-One';
-        font-size: 20px;
-        font-weight: 300;
-        color: #E1F4F3;
-        opacity: .5;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        border-bottom: 1px solid rgba($white, 0.2);
-        @media(max-width: 769px) {
-            font-size: 14px;
-        }
-        @media(max-width: 400px) {
-            font-size: 12px;
-        }
-
-        &::after{
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -1px;
-            height: 100%;
-            width: 100%;
-            border-bottom: 2px solid $white;
-            transform: translateX(-100%);
-            transition: transform .3s ease;
-        }
-
-        .label__content{
-            position: absolute;
-            bottom: 5px;
-            left: 5px;
-            transition: all .4s ease;
-        }
-    }
-    
-}
-
-.modal__form input:focus + .label-name .label__content,
-.modal__form input:valid + .label-name .label__content{
-    transform: translateY(-120%);
-    font-size: 14px;
-    opacity: .5;
-    @media(max-width: 400px) {
-        font-size: 10px;
-    }
-}
-
-.modal__form input:focus + .label-name::after,
-.modal__form input:valid + .label-name::after{
-    transform: translateX(0%);
-}
 
 .input-wrapper{
     height: 70px;
@@ -281,8 +204,10 @@
 
     .form-error{
         position: absolute;
-        bottom: 8px;
-        font-family: 'Days-One';
+        bottom: 0px;
+        left: 0;
+        font-family:'Sansation';
+        font-weight: 300;
         font-size: 10px;
         color: rgb(235, 86, 86);
         display: none;
@@ -304,37 +229,19 @@
     }
 }
 
-.text-group{
-    // overflow: hidden;
-    position: relative;
-    height: 160px;
-
-    .label-name{
-        border: none;
-
-        .label__content{
-            top: 5px;
-            color: #E1F4F3;
-        }
-
-        &::after{
-            content: "";
-            position: absolute;
-            border-bottom: none;
-        }
-
-    }
-}
-
 .text-wrapper{
     margin-top: 10px;
     height: 160px;
+    .form-error{
+        top: 62px;
+    }
 }
 
 .textarea{
     margin-top: 10px;
     font-family: 'Days-One';
     width: 100%;
+    max-height: 120px;
     border: none;
     overflow: hidden;
     padding: 0;
@@ -344,37 +251,115 @@
     font-size: 16px;
     padding: 5px 0;
     resize: none;
-    border-bottom: 1px solid rgba($white, 0.2);
+    border-bottom: 2px solid $grey;
+    transition: border-color 0.2s;
+
     @media(max-width: 400px) {
         height: 18px;
         font-size: 12px;
     }
 
-    &::placeholder{
-        font-size: 20px;
-    }
 }
 
-.modal__form textarea:focus + .label-name .label__content{
-    transform: translateY(-7px);
-    font-size: 14px;
-    opacity: .5;
-    @media(max-width: 400px) {
-        transform: translateY(-3px);
-        font-size: 10px;
-    }
-}
-
-
-.text-group.down{
-    .label-name .label__content{
-        transform: translateY(-7px);
+textarea:focus{
+    ~ .label-name{
+        position: absolute;
+        top: 10px;
+        display: block;
+        transition: .2s;
         font-size: 14px;
-        opacity: .5;
-        @media(max-width: 400px) {
-            transform: translateY(-3px);
-            font-size: 10px;
+        color: $green;
+    }
+    padding-top: 6px;
+    border-width: 3px;
+    border-color: $green;
+}
+
+.text-group.none{
+    textarea{
+            ~ .label-name{
+                position: absolute;
+                top: 10px;
+                display: block;
+                transition: .2s;
+                font-size: 14px;
+                color: $grey;
+            }
+            padding-top: 6px;
+            border-width: 3px;
+            border-color: $grey;
         }
+}
+
+
+.form__group{
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 100%;
+
+    .modal-input{
+        font-family: 'Sansation';
+        width: 100%;
+        font-size: 20px;
+        border: none;
+        border-bottom: 2px solid $grey;
+        outline: 0;
+        color: $white;
+        padding: 7px 0;
+        background: transparent;
+        transition: border-color 0.2s;
+        
+    }
+
+    .label-name{
+        font-family: 'Sansation';
+        font-weight: 300;
+        position: absolute;
+        bottom: 5px;
+        display: block;
+        transition: .2s;
+        font-size: 20px;
+        color: $grey;
+        pointer-events: none;
+    }
+
+    .modal-input:focus{
+        ~ .label-name{
+            position: absolute;
+            bottom: 35px;
+            display: block;
+            transition: .2s;
+            font-size: 14px;
+            color: $green;
+        }
+        padding-top: 6px;
+        border-width: 3px;
+        border-color: $green;
+    }
+
+    .modal-input:valid{
+        ~ .label-name{
+            position: absolute;
+            bottom: 35px;
+            display: block;
+            transition: .2s;
+            font-size: 14px;
+            color: $grey;
+        }
+        padding-top: 6px;
+        border-width: 3px;
+        border-color: $grey;
+    }
+}
+
+.text-group{
+    position: relative;
+    .label-name{
+        border: none;
+        top: 30px;
+        color: $grey;
+        transition: .2s all;
     }
 }
 /*=======================================================================================================*/

@@ -22,7 +22,6 @@ const fontsLoader = () => {
 
         for(let i = 1; i < option.length; i++) {
             option[i].style.fontFamily = option[i].textContent;
-            console.log(option[i]);
         }
     })
 };
