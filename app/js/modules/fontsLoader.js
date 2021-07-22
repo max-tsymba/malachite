@@ -1,6 +1,6 @@
 const fontsLoader = (url) => {
 
-    let select = document.getElementsByName('fonts');
+    let select = document.getElementsByName('font');
     let getFontsArray = [];
 
     select.forEach(option => {
