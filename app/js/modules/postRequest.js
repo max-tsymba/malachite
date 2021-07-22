@@ -41,7 +41,6 @@ const postRequest = () => {
 
                 form.classList.remove('_sending');
                 form.classList.add('active');
-                Reset(form);
                 setTimeout(() => {
                     submitBtn.disabled = false;
                     location.reload();

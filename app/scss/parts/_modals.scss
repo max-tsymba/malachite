@@ -77,7 +77,7 @@
             font-size: 24px;
             text-transform: uppercase;
             @media(max-width: 769px) {
-                font-size: 20px;
+                font-size: 24px;
             }
         }
 
@@ -158,11 +158,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: 0;
 
         select{
             width: 100%;
             -webkit-appearance: none;
-            height: 30px;
+            height: 34px;
             border: none;
             outline: none;
             background-color: transparent;
@@ -173,7 +174,7 @@
             opacity: 1;
             font-weight: 300;
             cursor: pointer;
-            border-bottom: 2px solid $grey;
+            border-bottom: 2px solid rgba(225, 244, 243, 0.5);
             
             &:focus{
                 border-width: 3px;
@@ -181,14 +182,16 @@
             }
 
             @media(max-width: 769px) {
-                font-size: 20px;
-            }
-            @media(max-width: 400px) {
-                font-size: 18px;
+                font-size: 24px;
             }
 
             @media(max-height: 570px ) {
                 font-size: 14px;
+                padding-top: 10px;
+            }
+
+            @media(max-width: 427px) {
+                font-size: 18px;
             }
 
             option{
@@ -342,7 +345,6 @@
 
 
 .text-wrapper{
-    margin-top: 20px;
     height: 160px;
     .form-error{
         top: 62px;
@@ -356,7 +358,7 @@
 
     @media(min-height: 580px) {
         .form-error{
-            top: 36px;
+            top: 52px;
         }
     }
 }
@@ -388,18 +390,23 @@
         margin-top: 20px;
         font-size: 14px;
     }
+    @media(min-height: 650px) {
+        margin-top: 20px;
+        font-size: 18px;
+    }
 }
+
 
 textarea:focus{
     ~ .label-name{
         position: absolute;
-        top: -15px;
+        top: 0px;
         display: block;
         transition: .2s all; 
         font-size: 14px;
         color: $green;
         @media(max-width: 400px) {
-           top: -22px;
+           top: 0px;
            font-size: 14px;
         }
         @media(max-height: 580px) {
@@ -414,12 +421,12 @@ textarea:focus{
     textarea{
             ~ .label-name{
                 position: absolute;
-                top: -15px;
+                top: 0px;
                 display: block;
                 transition: .2s all;
                 font-size: 14px;
                 @media(max-width: 400px) {
-                    top: -22px;
+                    top: 0px;
                     font-size: 14px;
                 }
                 @media(max-height: 580px) {
@@ -471,7 +478,7 @@ textarea:focus{
         color: rgba(225, 244, 243, 0.5);;
         pointer-events: none;
         @media(max-height: 570px) {
-            font-size: 14px;
+            font-size: 18px;
         }
         @media(max-width: 427px) {
             font-size: 18px;
@@ -481,13 +488,13 @@ textarea:focus{
     .modal-input:focus{
         ~ .label-name{
             position: absolute;
-            bottom: 35px;
+            bottom: 30px;
             display: block;
             transition: .2s;
             font-size: 14px;
             color: $green;
             @media(max-height: 650px) {
-                bottom: 26px;
+                bottom: 22px;
             }
         }
         border-width: 3px;
@@ -497,12 +504,12 @@ textarea:focus{
     .modal-input:valid{
         ~ .label-name{
             position: absolute;
-            bottom: 35px;
+            bottom: 30px;
             display: block;
             transition: .2s;
             font-size: 14px;
             @media(max-height: 650px) {
-                bottom: 26px;
+                bottom: 22px;
             }
         }
         border-width: 3px;
@@ -515,6 +522,7 @@ textarea:focus{
 
 .text-group{
     position: relative;
+    margin-top: 0;
     .label-name{
         bottom: 7px;
         border: none;   

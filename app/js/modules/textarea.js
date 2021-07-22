@@ -10,7 +10,7 @@ const resizeTextArea = () => {
       textareas[i].addEventListener("input", function(e){
         this.style.height = "auto";
         this.style.height = this.scrollHeight + "px";      
-        label.style.top = this.scrollHeight + 10 + 'px';
+        label.style.top = this.scrollHeight + 30 + 'px';
 
         if(this.style.height.slice(0, -2) > 100) {
           this.style.overflowY = 'scroll'; 
