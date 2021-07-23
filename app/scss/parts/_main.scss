@@ -26,6 +26,8 @@
     @media(max-width: 769px) {
        top: 50%;
        transform: translateY(-50%);
+       z-index: -1;
+       box-shadow: 0px 0px 300px 60px #571455;
     }
 }
 /*=======================================================================================================*/
@@ -139,6 +141,8 @@
                     @media(max-width: 769px) {
                         filter: drop-shadow(0px 0px 15px $purple-btn);
                         box-shadow: 0px 0px 4px #AC3E94;
+                        padding-left: 15px;
+                        padding-right: 15px;
                     }
                 }
                 &:nth-child(2) {
