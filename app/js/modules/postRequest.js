@@ -43,7 +43,7 @@ const postRequest = () => {
                 form.classList.add('active');
                 setTimeout(() => {
                     submitBtn.disabled = false;
-                    location.reload();
+                    // location.reload();
                 }, 2000);
             } else {   
 

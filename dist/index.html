@@ -150,6 +150,43 @@
                 </div>
                 <div class="form-error">Необходимо заполнить пустое поле</div>
             </div>
+
+            <div class="input-wrapper" id="file-wrapper">
+                <div class="form__group">
+                    <div class="file">
+                        <div class="file__item">
+                            <input class="file__input _req" id="formImage" size="1" accept=".png, .jpeg, .bmp, .gif, .svg" type="file" name="image" disabled>
+                            <button class="file__button" type="button">Вибрати файл</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-error">Необходимо заполнить пустое поле</div>
+            </div>
+
+            <div class="input-wrapper" id="font-wrapper">
+                <div class="form__group select-group" >
+                    <select class="form-select _req" id="fontInput" name="fonts" size="3" required disabled>
+                        <option value="" hidden disabled selected>Шрифт</option>
+                        <option value="1">Roboto</option>
+                        <option value="2">Days-One</option>
+                        <option value="3">VlaShu</option>
+                        <option value="4">MontserratAlternates-Regular</option>
+                        <option value="5">Candyreins</option>
+                        <option value="6">Delilah</option>
+                    </select>
+                </div>
+                <div class="form-error">Необходимо заполнить пустое поле</div>
+            </div>
+
+            <div class="input-wrapper" id="text-wrapper">
+                <div class="form__group">
+                    <input class="modal-input _req" id="textInput" type="text" name="message" autocomplete="off" disabled required/>
+                    <label class="label-name" for="message">
+                      <span class="label__content">Текст</span>
+                    </label>
+                </div>
+                <div class="form-error">Необходимо заполнить пустое поле</div>
+            </div>
             
             <div class="input-wrapper">
                 <div class="form__group">
@@ -167,21 +204,6 @@
                     <label class="label-name" for="height">
                       <span class="label__content">Висота, мм</span>
                     </label>
-                </div>
-                <div class="form-error">Необходимо заполнить пустое поле</div>
-            </div>
-
-            <div class="input-wrapper">
-                <div class="form__group select-group" >
-                    <select class="form-select _req" name="fonts" size="3" required>
-                        <option value="" hidden disabled selected>Шрифт</option>
-                        <option value="1">Roboto</option>
-                        <option value="2">Days-One</option>
-                        <option value="3">VlaShu</option>
-                        <option value="4">MontserratAlternates-Regular</option>
-                        <option value="5">Candyreins</option>
-                        <option value="6">Delilah</option>
-                    </select>
                 </div>
                 <div class="form-error">Необходимо заполнить пустое поле</div>
             </div>

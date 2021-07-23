@@ -13,6 +13,13 @@ const modalOpener = () => {
 
         const scroll = calcScroll();
 
+        const fileUpload = document.getElementById('file-wrapper');
+        const fileInput = document.getElementById('formImage');
+        const fontWrapper = document.getElementById('font-wrapper');
+        const fontInput = document.getElementById('fontInput');
+        const textWrapper = document.getElementById('text-wrapper');
+        const textInput = document.getElementById('textInput');
+
         openBtn.forEach(btn => {
             btn.addEventListener('click', () => {
 
@@ -33,6 +40,12 @@ const modalOpener = () => {
                 document.body.style.marginRight = `0px`; 
                 clearErrors(labels, wrappers);
                 Reset(modal);
+                fontWrapper.style.display = 'none';
+                textWrapper.style.display = 'none';
+                fileUpload.style.display = 'none';
+                fontInput.disabled = true;
+                textInput.disabled = true;
+                fileInput.disabled = true;
 
                 setTimeout(() => {
                     overlay.classList.remove('active');
@@ -53,6 +66,12 @@ const modalOpener = () => {
                 document.body.style.marginRight = `0px`; 
                 clearErrors(labels, wrappers);
                 Reset(modal);
+                fontWrapper.style.display = 'none';
+                textWrapper.style.display = 'none';
+                fileUpload.style.display = 'none';
+                fontInput.disabled = true;
+                textInput.disabled = true;
+                fileInput.disabled = true;
 
                 setTimeout(() => {
                     overlay.classList.remove('active');

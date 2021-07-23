@@ -21,6 +21,8 @@
     @media(max-width: 769px) {
        top: 50%;
        transform: translateY(-50%);
+       z-index: -1;
+       box-shadow: 0px 0px 300px 70px #0BDA51;
     }
 }
 
@@ -35,6 +37,8 @@
     @media(max-width: 769px) {
        top: 50%;
        transform: translateY(-50%);
+       z-index: -1;
+       box-shadow: 0px 0px 300px 70px #E761CA;
     }
 }
 /*=======================================================================================================*/
